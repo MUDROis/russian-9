@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Интерактивный урок по русскому языку для 9 класса. Сложносочинённые предложения: понятие, союзы, пунктуация.">
+    <title>Сложносочинённые предложения | Русский язык 9 класс</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 35px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-bottom: 30px;
+            text-align: center;
+            border-top: 4px solid #4a6fa5;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: #5a6c7d;
+            font-size: 1.15em;
+            font-style: italic;
+        }
+
+        .topic-block {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+
+        .topic-header {
+            background: #4a6fa5;
+            color: #ffffff;
+            padding: 18px 25px;
+            border-radius: 8px;
+            margin: -35px -35px 30px -35px;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            font-weight: 600;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            color: #4a6fa5;
+            font-size: 1.3em;
+            margin-bottom: 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e6ed;
+            font-weight: 600;
+        }
+
+        .theory-box {
+            background: #f8f9fb;
+            border-left: 4px solid #4a6fa5;
+            padding: 20px 25px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .visual-diagram {
+            background: #f8f9fb;
+            border: 1px solid #e0e6ed;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-weight: 600;
+            color: #4a6fa5;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        .speech-flow {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .flow-box {
+            background: #ffffff;
+            color: #2c3e50;
+            padding: 20px 25px;
+            border-radius: 8px;
+            min-width: 160px;
+            text-align: center;
+            border: 2px solid #4a6fa5;
+            box-shadow: 0 2px 8px rgba(74,111,165,0.08);
+        }
+
+        .flow-box > div {
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .flow-box small {
+            color: #5a6c7d;
+        }
+
+        .arrow {
+            font-size: 1.8em;
+            color: #4a6fa5;
+            font-weight: bold;
+        }
+
+        .real-life-example {
+            background: #f0f7f0;
+            border-left: 4px solid #6a9a6a;
+            padding: 20px 25px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .example-title {
+            color: #4a7a4a;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .practice-task {
+            background: #fffaf0;
+            border: 1px solid #f0dcb8;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .task-title {
+            color: #8b6f3a;
+            font-weight: 600;
+            font-size: 1.15em;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background: #4a6fa5;
+            color: #ffffff;
+            border: none;
+            padding: 11px 26px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 600;
+            margin: 10px 5px 10px 0;
+            transition: background 0.2s;
+            font-family: inherit;
+        }
+
+        .btn:hover {
+            background: #3a5a8a;
+        }
+
+        .answer-box {
+            display: none;
+            background: #f0f5fa;
+            border: 1px solid #c8d8e8;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin-top: 15px;
+        }
+
+        .answer-title {
+            color: #4a6fa5;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .oge-tip {
+            background: #f8f4f0;
+            border-left: 4px solid #b8865a;
+            padding: 18px 22px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .oge-tip-title {
+            color: #8b6f3a;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        blockquote {
+            background: #ffffff;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border-left: 3px solid #c8d8e8;
+            font-style: italic;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #4a6fa5;
+            font-weight: 600;
+        }
+
+        .final-block {
+            background: #ffffff;
+            border-top: 4px solid #4a6fa5;
+        }
+
+        .final-block h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .checklist-col h3 {
+            color: #4a6fa5;
+            margin-bottom: 15px;
+            font-size: 1.15em;
+        }
+
+        .checklist-col ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist-col li {
+            padding: 6px 0;
+            border-bottom: 1px dashed #e0e6ed;
+        }
+
+        .checklist-col li:before {
+            content: "☐ ";
+            color: #4a6fa5;
+            font-weight: bold;
+        }
+
+        .final-message {
+            text-align: center;
+            padding: 25px;
+            background: #f8f9fb;
+            border-radius: 8px;
+            border: 1px solid #e0e6ed;
+        }
+
+        .final-message h3 {
+            color: #4a6fa5;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background: #fff3c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .conjunction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .conj-card {
+            background: #ffffff;
+            border: 1px solid #e0e6ed;
+            border-left: 4px solid #4a6fa5;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+
+        .conj-card h4 {
+            color: #4a6fa5;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .conj-card ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .conj-card p {
+            font-size: 0.95em;
+            color: #5a6c7d;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.7em; }
+            h2 { font-size: 1.3em; }
+            .topic-block { padding: 20px; }
+            .topic-header { margin: -20px -20px 25px -20px; padding: 15px 20px; }
+            .speech-flow { flex-direction: column; }
+            .arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Сложносочинённые предложения</h1>
+            <p class="subtitle">Понятие, союзы, смысловые отношения и пунктуация (§11–§17)</p>
+        </header>
+
+        <!-- Блок 1: Понятие о ССП -->
+        <div class="topic-block">
+            <div class="topic-header">
+                <h2>§11. Что такое сложносочинённое предложение?</h2>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">🎯 Теория</h3>
+                
+                <div class="theory-box">
+                    <p><strong>Сложносочинённое предложение (ССП)</strong> — это сложное предложение, в котором две или более простые части (предикативные части) связаны <strong>сочинительными союзами</strong> и <strong>интонацией</strong>.</p>
+                    <ul>
+                        <li>Части ССП равноправны (независимы друг от друга).</li>
+                        <li>Союз стоит между частями и не является членом предложения.</li>
+                        <li>Интонация конца предложения есть только у всего ССП в целом.</li>
+                    </ul>
+                </div>
+
+                <div class="visual-diagram">
+                    <div class="diagram-title">Схема ССП</div>
+                    <div class="speech-flow">
+                        <div class="flow-box">
+                            <div>[ Основа 1 ]</div>
+                            <small>1-я часть</small>
+                        </div>
+                        <div class="arrow">, и(а, но)</div>
+                        <div class="flow-box">
+                            <div>[ Основа 2 ]</div>
+                            <small>2-я часть</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="real-life-example">
+                    <div class="example-title">💡 Важное отличие: ССП или простое?</div>
+                    <p>Не путай ССП с простым предложением, где есть однородные сказуемые!</p>
+                    <ul>
+                        <li><strong>Простое:</strong> «Я стал читать <span class="highlight">и</span> скоро пристрастился к книгам.» (Одна основа: <em>я стал читать и пристрастился</em>. Союз <em>и</em> связывает однородные сказуемые).</li>
+                        <li><strong>ССП:</strong> «Я стал читать, <span class="highlight">и</span> во мне пробудилась страсть к книгам.» (Две основы: 1) <em>я стал читать</em>; 2) <em>страсть пробудилась</em>. Союз <em>и</em> связывает две части сложного).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">📝 Практика</h3>
+                
+                <div class="practice-task">
+                    <div class="task-title">Задание 1. Найди ССП</div>
+                    <p>Определи, какое из предложений является сложносочинённым. Подчеркни грамматические основы.</p>
+                    <blockquote>
+                        1. Вдруг над зазубренным краем леса беззвучно промелькнул и исчез реактивный самолёт.<br>
+                        2. Вдруг над зазубренным краем леса беззвучно промелькнул реактивный самолёт, и только потом пустое небо прорычало ему вслед.
+                    </blockquote>
+                    <button class="btn" onclick="toggleAnswer('answer1')">Показать ответ</button>
+                    <div id="answer1" class="answer-box">
+                        <div class="answer-title">✅ Ответ</div>
+                        <p>Сложносочинённое — <strong>второе</strong> предложение.</p>
+                        <p><strong>Основы:</strong> 1) <em>самолёт промелькнул</em>; 2) <em>небо прорычало</em>.</p>
+                        <p>В первом предложении одна грамматическая основа: <em>самолёт промелькнул и исчез</em> (однородные сказуемые).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 2: Смысловые отношения и союзы -->
+        <div class="topic-block">
+            <div class="topic-header">
+                <h2>§12–15. Союзы и смысловые отношения</h2>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">🎯 Теория</h3>
+                
+                <div class="theory-box">
+                    <p>Сочинительные союзы делятся на три большие группы. Именно союз определяет, какие смысловые отношения возникают между частями ССП.</p>
+                </div>
+
+                <div class="conjunction-grid">
+                    <div class="conj-card">
+                        <h4>1. Соединительные</h4>
+                        <p><strong>Союзы:</strong> и, да(=и), ни...ни, тоже, также, же</p>
+                        <p><strong>Значение:</strong> одновременность, последовательность действий или причина/следствие.</p>
+                        <p><em>Пример:</em> Грянул гром, <strong>и</strong> полил дождь.</p>
+                    </div>
+                    <div class="conj-card">
+                        <h4>2. Разделительные</h4>
+                        <p><strong>Союзы:</strong> или, либо, то...то, не то...не то, то ли...то ли</p>
+                        <p><strong>Значение:</strong> чередование событий или взаимоисключение (одно из двух).</p>
+                        <p><em>Пример:</em> <strong>То</strong> падал туман, <strong>то</strong> вдруг припускал косой дождь.</p>
+                    </div>
+                    <div class="conj-card">
+                        <h4>3. Противительные</h4>
+                        <p><strong>Союзы:</strong> а, но, да(=но), однако, зато, не только... но и</p>
+                        <p><strong>Значение:</strong> сопоставление или противопоставление.</p>
+                        <p><em>Пример:</em> Солнце уже скрылось, <strong>но</strong> было ещё светло.</p>
+                    </div>
+                </div>
+
+                <div class="oge-tip">
+                    <div class="oge-tip-title">💡 Подсказка к заданию</div>
+                    <p>Чтобы определить тип союза, попробуй заменить его:</p>
+                    <ul>
+                        <li>Если можно подставить <em>«и в это же время»</em> или <em>«и затем»</em> → соединительный.</li>
+                        <li>Если можно подставить <em>«или одно, или другое»</em> → разделительный.</li>
+                        <li>Если можно подставить <em>«а именно»</em> или <em>«но при этом»</em> → противительный.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">📝 Практика</h3>
+                
+                <div class="practice-task">
+                    <div class="task-title">Задание 1. Определи группу союза</div>
+                    <p>Прочитай предложения. Укажи, каким сочинительным союзом связаны части, и определи смысловые отношения.</p>
+                    <ol>
+                        <li>Ветер всё свистел, и барометр падал.</li>
+                        <li>То солнце тусклое блестит, то туча чёрная висит.</li>
+                        <li>Месяц под косой блестит, а во лбу звезда горит.</li>
+                    </ol>
+                    <button class="btn" onclick="toggleAnswer('answer2')">Показать ответ</button>
+                    <div id="answer2" class="answer-box">
+                        <div class="answer-title">✅ Ответ</div>
+                        <ol>
+                            <li><strong>и</strong> — соединительный. Смысл: одновременность или следствие (свистел, и поэтому/и в это же время падал).</li>
+                            <li><strong>то... то</strong> — разделительный. Смысл: чередование событий.</li>
+                            <li><strong>а</strong> — противительный. Смысл: сопоставление двух явлений.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="practice-task">
+                    <div class="task-title">Задание 2. Конструктор ССП</div>
+                    <p>Составь из двух простых предложений одно сложносочинённое, используя <strong>противительные</strong> союзы (<em>а, но, зато</em>). Запиши и объясни разницу в оттенках смысла.</p>
+                    <blockquote>
+                        1. Каждый может увидеть красоту родной земли. Не каждый умеет читать книгу природы.<br>
+                        2. В спешке люди не замечают красоты мира. Природа всегда рядом с человеком.
+                    </blockquote>
+                    <button class="btn" onclick="toggleAnswer('answer3')">Показать образец</button>
+                    <div id="answer3" class="answer-box">
+                        <div class="answer-title">✅ Образец выполнения</div>
+                        <p>1. Каждый может увидеть красоту родной земли, <strong>но</strong> не каждый умеет читать книгу природы. (Противопоставление с оттенком ограничения).</p>
+                        <p>2. В спешке люди не замечают красоты мира, <strong>а</strong> природа всегда рядом с человеком. (Резкое противопоставление).</p>
+                        <p>3. В спешке люди не замечают красоты мира, <strong>зато</strong> природа всегда рядом с человеком. (Сопоставление с оттенком компенсации).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 3: Пунктуация в ССП -->
+        <div class="topic-block">
+            <div class="topic-header">
+                <h2>§16. Знаки препинания в ССП</h2>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title"> Теория</h3>
+                
+                <div class="theory-box">
+                    <p><strong>Главное правило:</strong> Части ССП разделяются <strong>запятой</strong>. Запятая ставится перед сочинительным союзом.</p>
+                    <p><em>Пример:</em> Цветы кивают мне, головки наклоня, <strong>и</strong> манит куст душистой веткой.</p>
+                </div>
+
+                <div class="visual-diagram">
+                    <div class="diagram-title">⚠️ Три исключения: когда запятая НЕ ставится</div>
+                    <div style="text-align: left; margin-top: 15px;">
+                        <ol>
+                            <li><strong>Есть общий второстепенный член</strong> (обычно обстоятельство места или времени в начале предложения).<br>
+                            <em>Пример:</em> <span class="highlight">В лесу</span> пели птицы и шумела листва. (Общее обстоятельство «В лесу»).</li>
+                            <li><strong>Есть общее придаточное предложение</strong>.<br>
+                            <em>Пример:</em> <span class="highlight">Когда мы пришли домой</span>, мама готовила ужин и папа читал газету.</li>
+                            <li><strong>Обе части — вопросительные, восклицательные или побудительные</strong>.<br>
+                            <em>Пример:</em> Где он сейчас и что он делает? (Общая вопросительная интонация).</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="real-life-example">
+                    <div class="example-title">💡 Авторское тире</div>
+                    <p>Иногда перед союзом <em>и</em> ставится <strong>тире</strong>, если автор хочет показать:</p>
+                    <ul>
+                        <li>Резкое противопоставление: «Вот север, тучи нагоняя, дохнул, завыл — и вот сама идёт волшебница зима.»</li>
+                        <li>Быструю смену событий: «Грянул выстрел — и птица упала.»</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">📝 Практика</h3>
+                
+                <div class="practice-task">
+                    <div class="task-title">Задание 1. Ловушка: общее обстоятельство</div>
+                    <p>Расставь пропущенные запятые. Если запятая не нужна — объясни почему (найди общее обстоятельство).</p>
+                    <blockquote>
+                        1. С каждым шагом вперёд горная панорама точно раздавалась всё шире и шире и небо делалось глубже.<br>
+                        2. По обе стороны улицы зажглись фонари и в окнах показались огни.
+                    </blockquote>
+                    <button class="btn" onclick="toggleAnswer('answer4')">Показать ответ</button>
+                    <div id="answer4" class="answer-box">
+                        <div class="answer-title">✅ Ответ</div>
+                        <p>1. «С каждым шагом вперёд горная панорама точно раздавалась всё шире и шире и небо делалось глубже.»</p>
+                        <p><strong>Запятая не нужна!</strong> Обе части относятся к одному общему обстоятельству: <em>(Где? Когда?) С каждым шагом вперёд</em>.</p>
+                        <p>2. «По обе стороны улицы зажглись фонари и в окнах показались огни.»</p>
+                        <p><strong>Запятая не нужна!</strong> Общее обстоятельство места: <em>(Где?) По обе стороны улицы</em>.</p>
+                    </div>
+                </div>
+
+                <div class="practice-task">
+                    <div class="task-title">Задание 2. Расставь знаки препинания</div>
+                    <p>Скопируй предложения, расставляя запятые там, где это необходимо. Подчеркни грамматические основы.</p>
+                    <blockquote>
+                        1. Обильная роса затопляла травы и листья но зной проникал уже в самый лес.<br>
+                        2. Ещё и лета не бывало а лишь дожди всё шли да шли и небо холодом дышало.<br>
+                        3. Это кто такие и что им надобно?
+                    </blockquote>
+                    <button class="btn" onclick="toggleAnswer('answer5')">Показать ответ</button>
+                    <div id="answer5" class="answer-box">
+                        <div class="answer-title">✅ Ответ</div>
+                        <p>1. Обильная роса затопляла травы и листья <strong>,</strong> но зной проникал уже в самый лес. (ССП с противительным союзом <em>но</em>).</p>
+                        <p>2. Ещё и лета не бывало <strong>,</strong> а лишь дожди всё шли да шли <strong>,</strong> и небо холодом дышало. (ССП с союзами <em>а</em> и <em>и</em>).</p>
+                        <p>3. Это кто такие и что им надобно? (Запятая <strong>не нужна</strong>, так как обе части вопросительные и имеют общую интонацию вопроса).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 4: Синтаксический разбор и итог -->
+        <div class="topic-block">
+            <div class="topic-header">
+                <h2>§17. Синтаксический разбор ССП</h2>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">🎯 Теория: Алгоритм разбора</h3>
+                
+                <div class="theory-box">
+                    <ol>
+                        <li>Вид по цели высказывания и эмоциональной окраске (повеств./вопрос./побудит.; невоскл./воскл.).</li>
+                        <li>Простые предложения в составе сложного, их грамматические основы.</li>
+                        <li>Тип связи (союзная, бессоюзная).</li>
+                        <li>Сочинительные союзы (соединительные, противительные, разделительные).</li>
+                        <li>Смысловые отношения между частями (перечисление, противопоставление, чередование).</li>
+                    </ol>
+                </div>
+
+                <div class="real-life-example">
+                    <div class="example-title">💡 Образец устного разбора</div>
+                    <p><em>«Воздух дышит весенним ароматом, и вся природа оживляется.»</em></p>
+                    <p>Предложение повествовательное, невосклицательное. Состоит из двух простых. В 1-м основа: <em>воздух дышит ароматом</em>, во 2-м: <em>природа оживляется</em>. Связь союзная, средство связи — соединительный союз <em>и</em>. Смысловые отношения перечислительные. Следовательно, это сложносочинённое предложение.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title"> Итоговая практика</h3>
+                
+                <div class="practice-task">
+                    <div class="task-title">Задание: «Редактор»</div>
+                    <p>Найди и исправь все пунктуационные ошибки в тексте. Объясни, почему в одном из случаев запятая не нужна.</p>
+                    <blockquote>
+                        «Только к полуночи остыла накалённая за день земля, и стало по-настоящему прохладно. Где-то недалеко в балке наверное был пруд или степной лиман. От него потянуло запахом ила, камыша, и совсем недалеко ударил перепел.»
+                    </blockquote>
+                    <button class="btn" onclick="toggleAnswer('answer6')">Показать ответ</button>
+                    <div id="answer6" class="answer-box">
+                        <div class="answer-title">✅ Ответ</div>
+                        <p>1. «Только к полуночи остыла накалённая за день земля, и стало по-настоящему прохладно.» (Запятая нужна: ССП с союзом <em>и</em>, части не имеют общего второстепенного члена).</p>
+                        <p>2. «Где-то недалеко в балке наверное был пруд или степной лиман.» (Запятая перед <em>или</em> не нужна, так как это простое предложение с однородными подлежащими, соединёнными одиночным союзом <em>или</em>).</p>
+                        <p>3. «От него потянуло запахом ила, камыша, и совсем недалеко ударил перепел.» (Запятая перед <em>и</em> нужна: ССП. Первая часть осложнена однородными дополнениями).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Итоговый блок -->
+        <div class="topic-block final-block">
+            <h2>🎓 Итоговый чек-лист</h2>
+            <div class="checklist-grid">
+                <div class="checklist-col">
+                    <h3>✅ Я знаю:</h3>
+                    <ul>
+                        <li>Определение ССП и его схему</li>
+                        <li>Три группы сочинительных союзов</li>
+                        <li>Смысловые отношения между частями</li>
+                        <li>Три исключения, когда запятая в ССП не ставится</li>
+                    </ul>
+                </div>
+                <div class="checklist-col">
+                    <h3>✅ Я умею:</h3>
+                    <ul>
+                        <li>Отличать ССП от простого предложения с однородными членами</li>
+                        <li>Определять тип союза и смысловые отношения</li>
+                        <li>Находить общий второстепенный член</li>
+                        <li>Выполнять полный синтаксический разбор ССП</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="final-message">
+                <h3>Отличная работа!</h3>
+                <p>Тема «Сложносочинённые предложения» — фундамент для понимания всего синтаксиса сложного предложения. Обрати особое внимание на исключения в пунктуации!</p>
+                <p style="font-size: 1.1em; margin-top: 10px; color: #4a6fa5;"><strong>У тебя всё получится!</strong> 💪</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(id) {
+            const answerBox = document.getElementById(id);
+            if (answerBox.style.display === 'block') {
+                answerBox.style.display = 'none';
+            } else {
+                answerBox.style.display = 'block';
+                answerBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Урок загружен. Удачи!');
+        });
+    </script>
+</body>
+</html>

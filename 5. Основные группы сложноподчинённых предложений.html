@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Урок русского языка, 9 класс: основные группы сложноподчинённых предложений (§22-30). Теория, практика на усложнение, формат ОГЭ.">
+<title>Основные группы СПП | Русский язык 9 класс</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.7; color: #2c3e50; background: #f5f7fa; min-height: 100vh; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 30px 20px; }
+    header { background: #fff; padding: 35px 30px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.06); margin-bottom: 30px; text-align: center; border-top: 4px solid #4a6fa5; }
+    h1 { color: #2c3e50; font-size: 2.2em; margin-bottom: 10px; font-weight: 600; }
+    .subtitle { color: #5a6c7d; font-size: 1.15em; font-style: italic; }
+    .topic-block { background: #fff; border-radius: 12px; padding: 35px; margin-bottom: 25px; box-shadow: 0 2px 12px rgba(0,0,0,.05); }
+    .topic-header { background: #4a6fa5; color: #fff; padding: 18px 25px; border-radius: 8px; margin: -35px -35px 30px -35px; }
+    h2 { font-size: 1.6em; font-weight: 600; }
+    .section { margin-bottom: 35px; }
+    .section-title { color: #4a6fa5; font-size: 1.3em; margin-bottom: 18px; padding-bottom: 8px; border-bottom: 2px solid #e0e6ed; font-weight: 600; }
+    .theory-box { background: #f8f9fb; border-left: 4px solid #4a6fa5; padding: 20px 25px; border-radius: 6px; margin-bottom: 20px; }
+    .visual-diagram { background: #f8f9fb; border: 1px solid #e0e6ed; border-radius: 8px; padding: 25px; margin: 20px 0; text-align: center; }
+    .diagram-title { font-weight: 600; color: #4a6fa5; margin-bottom: 15px; font-size: 1.05em; }
+    .speech-flow { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .flow-box { background: #fff; color: #2c3e50; padding: 20px 25px; border-radius: 8px; min-width: 160px; text-align: center; border: 2px solid #4a6fa5; box-shadow: 0 2px 8px rgba(74,111,165,.08); }
+    .flow-box > div { font-weight: 600; font-size: 1.1em; margin-bottom: 5px; }
+    .flow-box small { color: #5a6c7d; }
+    .arrow { font-size: 1.6em; color: #4a6fa5; font-weight: bold; }
+    .real-life-example { background: #f0f7f0; border-left: 4px solid #6a9a6a; padding: 20px 25px; border-radius: 6px; margin: 20px 0; }
+    .example-title { color: #4a7a4a; font-weight: 600; margin-bottom: 10px; }
+    .practice-task { background: #fffaf0; border: 1px solid #f0dcb8; border-radius: 8px; padding: 25px; margin: 25px 0; }
+    .task-title { color: #8b6f3a; font-weight: 600; font-size: 1.15em; margin-bottom: 15px; }
+    .btn { background: #4a6fa5; color: #fff; border: none; padding: 11px 26px; border-radius: 6px; cursor: pointer; font-size: .95em; font-weight: 600; margin: 10px 5px 10px 0; transition: background .2s; font-family: inherit; }
+    .btn:hover { background: #3a5a8a; }
+    .answer-box { display: none; background: #f0f5fa; border: 1px solid #c8d8e8; border-radius: 8px; padding: 20px 25px; margin-top: 15px; }
+    .answer-title { color: #4a6fa5; font-weight: 600; margin-bottom: 10px; }
+    .oge-tip { background: #f8f4f0; border-left: 4px solid #b8865a; padding: 18px 22px; border-radius: 6px; margin: 20px 0; }
+    .oge-tip-title { color: #8b6f3a; font-weight: 600; margin-bottom: 8px; }
+    blockquote { background: #fff; padding: 15px 20px; border-radius: 6px; margin: 10px 0; border-left: 3px solid #c8d8e8; font-style: italic; }
+    ul, ol { margin-left: 25px; margin-bottom: 15px; }
+    li { margin-bottom: 8px; }
+    strong { color: #4a6fa5; font-weight: 600; }
+    .highlight { background: #fff3c4; padding: 2px 6px; border-radius: 3px; font-weight: 600; }
+    .scheme-box { background: #f8f9fb; border: 2px solid #4a6fa5; border-radius: 8px; padding: 15px; margin: 15px 0; font-family: 'Courier New', monospace; text-align: center; font-weight: bold; }
+    .conj-card { background: #fff; border: 1px solid #e0e6ed; border-left: 4px solid #4a6fa5; border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.04); }
+    .conj-card h4 { color: #4a6fa5; margin-bottom: 10px; font-size: 1.1em; }
+    .conj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+    .final-block { background: #fff; border-top: 4px solid #4a6fa5; }
+    .final-block h2 { color: #2c3e50; text-align: center; margin-bottom: 25px; }
+    .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 25px; }
+    .checklist-col h3 { color: #4a6fa5; margin-bottom: 15px; font-size: 1.15em; }
+    .checklist-col ul { list-style: none; margin-left: 0; }
+    .checklist-col li { padding: 6px 0; border-bottom: 1px dashed #e0e6ed; }
+    .checklist-col li:before { content: "☐ "; color: #4a6fa5; font-weight: bold; }
+    .final-message { text-align: center; padding: 25px; background: #f8f9fb; border-radius: 8px; border: 1px solid #e0e6ed; }
+    .final-message h3 { color: #4a6fa5; margin-bottom: 10px; }
+    @media (max-width: 768px) {
+        h1 { font-size: 1.7em; } h2 { font-size: 1.3em; }
+        .topic-block { padding: 20px; }
+        .topic-header { margin: -20px -20px 25px -20px; padding: 15px 20px; }
+        .speech-flow { flex-direction: column; }
+        .arrow { transform: rotate(90deg); }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+    <h1>Основные группы сложноподчинённых предложений</h1>
+    <p class="subtitle">Виды придаточных, предложения с несколькими придаточными, разбор (§22–§30)</p>
+</header>
+
+<!-- ============ БЛОК 1. §22 ============ -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§22. Придаточные определительные</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория: придаточное-«прилагательное»</h3>
+        <div class="theory-box">
+            <p><strong>Придаточное определительное</strong> характеризует предмет или явление из главного предложения и отвечает на вопрос <span class="highlight">какой? какая? какое? какие? чей?</span></p>
+            <p>Оно относится к <strong>существительному</strong> (или слову в значении существительного) и присоединяется союзными словами <span class="highlight">который, какой, чей, где, куда, откуда, когда</span>.</p>
+            <p>Если в главном есть местоимения <em>тот, такой, таков, всякий, весь, любой</em>, придаточное раскрывает их содержание, и местоимение в придаточной части обязательно: «А тот, <strong>кого</strong> никто не любит…», «Каково лето, таково и сено».</p>
+        </div>
+
+        <div class="visual-diagram">
+            <div class="diagram-title">Схема</div>
+            <div class="scheme-box">[ сущ. ], ( которое … ).</div>
+            <p style="color:#5a6c7d;">Возьми книгу <em>(какую?)</em>, <strong>которая</strong> лежит на верхней полке.</p>
+        </div>
+
+        <div class="real-life-example">
+            <div class="example-title">💡 Пример из жизни</div>
+            <p>«Приложение, <strong>которое</strong> я установил вчера, отлично редактирует фото.»</p>
+            <p>Приложение <em>(какое?)</em> → которое я установил вчера. Придаточное стоит после определяемого слова и выделяется запятой.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Найди и спроси</div>
+            <p>Найди придаточное определительное и поставь к нему вопрос от главного предложения:</p>
+            <ol>
+                <li>Бывают такие осенние ночи, когда безветрие стоит над лесистым краем.</li>
+                <li>На горе, куда нам предстояло подняться, белела церковка с зелёной крышей.</li>
+                <li>Непонятным и смешным становится тот страх, что испытывают перед природой «комнатные люди».</li>
+                <li>Мы условились драться за скирдами, что находились возле крепости.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a1')">Показать ответ</button>
+            <div id="a1" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>ночи <em>(какие?)</em> → когда безветрие стоит…;</li>
+                    <li>горе <em>(какой?)</em> → куда нам предстояло подняться;</li>
+                    <li>страх <em>(какой?)</em> → что испытывают «комнатные люди»;</li>
+                    <li>скирдами <em>(какими?)</em> → что находились возле крепости.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Расставь запятые</div>
+            <ol>
+                <li>По обеим сторонам дороги которая вела в лес зеленели молодые посадки.</li>
+                <li>На постой нас определили в просторный дом где пахло вымытыми стенами и чистотой.</li>
+                <li>Сетевой этикет должен отвечать принципу коммуникации который реализуется в наборе определённых требований.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a2')">Показать ответ</button>
+            <div id="a2" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>По обеим сторонам дороги<span class="highlight">,</span> которая вела в лес<span class="highlight">,</span> зеленели молодые посадки. (придаточное внутри главного — две запятые)</li>
+                    <li>…в просторный дом<span class="highlight">,</span> где пахло вымытыми стенами и чистотой.</li>
+                    <li>…принципу коммуникации<span class="highlight">,</span> который реализуется в наборе определённых требований.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 3 (сложнее). Убери повторы «который»</div>
+            <p>Замени повторяющееся союзное слово <em>который</em> на <strong>что, где, куда, откуда</strong> или причастный оборот:</p>
+            <blockquote>Рекомендую тебе прочитать книгу, которая заинтересовала всех наших ребят. В ней есть глава, в которой увлекательно рассказано о достижениях науки и техники.</blockquote>
+            <button class="btn" onclick="toggleAnswer('a3')">Показать ответ</button>
+            <div id="a3" class="answer-box">
+                <div class="answer-title">✅ Ответ (варианты)</div>
+                <p>«Рекомендую тебе прочитать книгу, <strong>что</strong> заинтересовала всех наших ребят. В ней есть глава, <strong>где</strong> увлекательно рассказано о достижениях науки и техники.»</p>
+                <p>Или: «…книгу, <strong>заинтересовавшую</strong> всех наших ребят. В ней есть глава, в которой увлекательно рассказано…»</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ БЛОК 2. §23 ============ -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§23. Придаточные изъяснительные</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория: придаточное-«дополнение»</h3>
+        <div class="theory-box">
+            <p><strong>Придаточное изъяснительное</strong> относится к словам со значением <strong>речи, мысли, чувства, состояния</strong> и отвечает на <span class="highlight">падежные вопросы (что? о чём? чего? кому?…)</span>.</p>
+            <p>Чаще всего главное — это глаголы: <em>говорить, сказать, думать, понимать, чувствовать, увидеть, услышать, решить, радоваться, жалеть</em>; реже — слова состояния: <em>рад, уверен, виноват, жаль, нужно, известно</em>.</p>
+            <p>Средства связи: союзы <span class="highlight">что, чтобы, будто, как, ли</span> и союзные слова <span class="highlight">кто, что, где, куда, как, сколько, почему, зачем</span>.</p>
+        </div>
+
+        <div class="visual-diagram">
+            <div class="diagram-title">Схема</div>
+            <div class="scheme-box">[ глагол речи/мысли ], ( что … ).</div>
+            <p style="color:#5a6c7d;">Сорока сама скажет <em>(что скажет?)</em>, где гнездо свила.</p>
+        </div>
+
+        <div class="real-life-example">
+            <div class="example-title">💡 Пример из жизни</div>
+            <p>«Я не знаю, <strong>почему</strong> друг не отвечает на сообщения.» — знаю <em>(чего не знаю? / почему?)</em>.</p>
+            <p>Частица <strong>ли</strong> в роли союза придаёт оттенок вопроса: «Я спросил, позволит <strong>ли</strong> он проводить его».</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Найди поясняемое слово</div>
+            <p>Отметь слово в главном предложении, к которому относится придаточное, и поставь вопрос:</p>
+            <ol>
+                <li>Я узнал, что Ася до отъезда за границу долго жила в деревне.</li>
+                <li>Посмотрите, что вы наделали!</li>
+                <li>Я понял, почему эта странная девочка меня привлекает.</li>
+                <li>Мальчику показалось, будто в комнате слабо зазвенела струна.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a4')">Показать ответ</button>
+            <div id="a4" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>узнал <em>(что?)</em>;</li>
+                    <li>посмотрите <em>(что?)</em>;</li>
+                    <li>понял <em>(что? / почему?)</em>;</li>
+                    <li>показалось <em>(что?)</em> — союз <em>будто</em> передаёт неуверенность.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Догадайся и продолжи</div>
+            <p>Закончи предложения так, чтобы придаточное было изъяснительным (используй союзы <em>что</em> или <em>будто, как будто</em>):</p>
+            <ol>
+                <li>В школе сообщили о том, …</li>
+                <li>Через несколько дней стало известно, …</li>
+                <li>В ночной тишине ребятам послышалось, …</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a5')">Показать образец</button>
+            <div id="a5" class="answer-box">
+                <div class="answer-title">✅ Образец</div>
+                <ol>
+                    <li>В школе сообщили о том, <strong>что</strong> в субботу состоится поход в музей.</li>
+                    <li>Через несколько дней стало известно, <strong>что</strong> фестиваль всё-таки состоится.</li>
+                    <li>В ночной тишине ребятам послышалось, <strong>как будто</strong> кто-то тихо зовёт их по именам.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 3 (сложнее). Прямая речь → косвенная</div>
+            <p>Передай диалог сложноподчинёнными предложениями с изъяснительными придаточными:</p>
+            <blockquote>— Тебе понравилась комедия «Горе от ума»? (поинтересоваться)<br>— Это изумительное произведение. (сказать)</blockquote>
+            <button class="btn" onclick="toggleAnswer('a6')">Показать ответ</button>
+            <div id="a6" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p>Лидия поинтересовалась, <strong>понравилась ли</strong> мне комедия «Горе от ума». А я сказал(а), <strong>что</strong> это изумительное произведение.</p>
+                <p>Обрати внимание: вопрос превратился в придаточное с частицей <em>ли</em> в роли союза.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ БЛОК 3. §24-25 ============ -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§24–25. Придаточные обстоятельственные: времени и места</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория: три группы обстоятельственных</h3>
+        <div class="theory-box">
+            <p>Придаточные обстоятельственные имеют те же значения и вопросы, что и обстоятельства в простом предложении. Три большие группы:</p>
+            <ul>
+                <li><strong>времени и места</strong> (§25);</li>
+                <li><strong>причины, следствия, условия, уступки, цели</strong> (§26);</li>
+                <li><strong>образа действия, меры и степени, сравнения</strong> (§27).</li>
+            </ul>
+        </div>
+
+        <div class="conj-grid">
+            <div class="conj-card">
+                <h4>⏰ Времени</h4>
+                <p><strong>Вопросы:</strong> когда? как долго? с каких пор? до каких пор?</p>
+                <p><strong>Союзы:</strong> когда, пока, как только, едва, с тех пор как, до тех пор пока, перед тем как, в то время как</p>
+                <p><em>Уже смеркалось, <strong>когда</strong> мы приехали домой.</em></p>
+            </div>
+            <div class="conj-card">
+                <h4>📍 Места</h4>
+                <p><strong>Вопросы:</strong> где? куда? откуда?</p>
+                <p><strong>Союзные слова:</strong> где, куда, откуда; в главном часто указательные <em>там, туда, оттуда</em></p>
+                <p><em>Чуть светлела полоска <strong>там, где</strong> село солнышко.</em></p>
+            </div>
+        </div>
+
+        <div class="oge-tip">
+            <div class="oge-tip-title">💡 Подсказка</div>
+            <p>Не путай союзные слова места и определительные придаточные: «дом, <strong>где</strong> я вырос» — определительное (дом какой?), а «<strong>там</strong>, где я вырос» — места (там где?). Смотри, к чему относится придаточное: к существительному или к указательному слову/всему главному.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Время или место?</div>
+            <p>Поставь вопрос к придаточному и определи его вид:</p>
+            <ol>
+                <li>Как только папа ушёл, я живо оделся и прибежал.</li>
+                <li>До тех пор пока не узнаешь горя, не станешь взрослым.</li>
+                <li>Откуда дует ветер, оттуда и тучи плывут.</li>
+                <li>Я много раз смотрел туда, где сливаются Енисей и Мана.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a7')">Показать ответ</button>
+            <div id="a7" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>когда? с каких пор? — <strong>времени</strong>;</li>
+                    <li>до каких пор? — <strong>времени</strong>;</li>
+                    <li>откуда? оттуда? — <strong>места</strong> (указательное слово <em>оттуда</em>);</li>
+                    <li>где? — <strong>места</strong> (указательное слово <em>туда</em>).</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Расставь запятые</div>
+            <ol>
+                <li>Придя домой когда уже смеркалось Мешков застал одного Володю.</li>
+                <li>Пока путешественники охотились проводник приготовил ужин.</li>
+                <li>Перед тем как взяться за скрипку он засушивал рукава рубахи.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a8')">Показать ответ</button>
+            <div id="a8" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>Придя домой<span class="highlight">,</span> когда уже смеркалось<span class="highlight">,</span> Мешков застал одного Володю. (придаточное внутри главного)</li>
+                    <li>Пока путешественники охотились<span class="highlight">,</span> проводник приготовил ужин.</li>
+                    <li>Перед тем как взяться за скрипку<span class="highlight">,</span> он засушивал рукава рубахи. (составной союз <em>перед тем как</em> не расчленяется)</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 3 (сложнее). Смоделируй по схеме</div>
+            <p>Составь по одному предложению по схемам и запиши связный мини-текст «Путешествую…» из 3–4 предложений с придаточными места:</p>
+            <div class="scheme-box">там …, где … &nbsp;&nbsp;|&nbsp;&nbsp; туда …, куда … &nbsp;&nbsp;|&nbsp;&nbsp; тогда …, когда …</div>
+            <button class="btn" onclick="toggleAnswer('a9')">Показать образец</button>
+            <div id="a9" class="answer-box">
+                <div class="answer-title">✅ Образец</div>
+                <p>Не один раз в своём воображении я летал туда, куда не долетают даже птицы. Я оказывался там, где океан встречается с небом. И тогда, когда над водой поднималось солнце, я чувствовал себя абсолютно счастливым. Мне хочется вернуться туда, где шумит тёплый ветер странствий.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ БЛОК 4. §26 ============ -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§26. Придаточные цели, причины, условия, уступки, следствия</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория: общее значение обусловленности</h3>
+        <div class="theory-box">
+            <p>Все эти виды объясняют, <strong>почему, вследствие чего, при каком условии, вопреки чему и с какой целью</strong> происходит то, о чём говорится в главном.</p>
+        </div>
+
+        <div class="conj-grid">
+            <div class="conj-card">
+                <h4>❓ Причины</h4>
+                <p><strong>Вопросы:</strong> почему? отчего?</p>
+                <p><strong>Союзы:</strong> потому что, оттого что, так как, благодаря тому что, поскольку</p>
+            </div>
+            <div class="conj-card">
+                <h4>➡️ Следствия</h4>
+                <p><strong>Вопрос:</strong> что произошло вследствие этого?</p>
+                <p><strong>Союз:</strong> <span class="highlight">так что</span> (придаточное содержит результат)</p>
+            </div>
+            <div class="conj-card">
+                <h4>⚠️ Условия</h4>
+                <p><strong>Вопрос:</strong> при каком условии?</p>
+                <p><strong>Союзы:</strong> если, если бы, раз, коли, ежели</p>
+            </div>
+            <div class="conj-card">
+                <h4>🔄 Уступки</h4>
+                <p><strong>Вопросы:</strong> несмотря на что? вопреки чему?</p>
+                <p><strong>Союзы:</strong> хотя, несмотря на то что, пусть, пускай; как ни, сколько ни</p>
+            </div>
+            <div class="conj-card">
+                <h4>🎯 Цели</h4>
+                <p><strong>Вопросы:</strong> зачем? с какой целью?</p>
+                <p><strong>Союзы:</strong> чтобы, для того чтобы, с тем чтобы, дабы; лишь бы, только бы</p>
+            </div>
+        </div>
+
+        <div class="oge-tip">
+            <div class="oge-tip-title">💡 Подсказка: причина ≠ следствие</div>
+            <p>Сравни: «Мы спрятались, <strong>потому что</strong> начался дождь» (причина в придаточном) и «Начался дождь, <strong>так что</strong> мы спрятались» (следствие в придаточном). Союз <em>так что</em> — верный признак придаточного следствия.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Определи вид</div>
+            <ol>
+                <li>Мы спрятались под дерево, потому что начался дождь.</li>
+                <li>Начался дождь, так что мы спрятались под дерево.</li>
+                <li>Если начнётся дождь, то мы спрячемся под дерево.</li>
+                <li>Чтобы укрыться от дождя, мы спрятались под дерево.</li>
+                <li>Мы не стали прятаться, хотя пошёл дождь.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a10')">Показать ответ</button>
+            <div id="a10" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>причины; <li>следствия; <li>условия; <li>цели; <li>уступки.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Запятые + вид</div>
+            <ol>
+                <li>Ты отвечал замечательно так что отметка должна быть высокой.</li>
+                <li>Если сухие ветки в тихую погоду потрескивают будет дождь.</li>
+                <li>Хотя садовод пересадил сеянцы вовремя они остановились в росте.</li>
+                <li>Чтобы лекция имела успех надо завоевать внимание слушателей.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a11')">Показать ответ</button>
+            <div id="a11" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>…замечательно<span class="highlight">,</span> так что… — <strong>следствия</strong>;</li>
+                    <li>Если… потрескивают<span class="highlight">,</span> будет дождь — <strong>условия</strong>;</li>
+                    <li>Хотя… вовремя<span class="highlight">,</span> они остановились… — <strong>уступки</strong>;</li>
+                    <li>Чтобы… успех<span class="highlight">,</span> надо завоевать… — <strong>цели</strong>.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 3 (сложнее). Причина ↔ следствие</div>
+            <p>Перестрой предложения по образцу и определи вид придаточного до и после:</p>
+            <p><em>Образец: Переходить реку опасно, потому что лёд ещё очень тонкий (причина). → Лёд ещё очень тонкий, так что переходить реку опасно (следствие).</em></p>
+            <ol>
+                <li>Надо потеплее одеться, потому что на улице уже довольно свежо.</li>
+                <li>Придётся сделать второй снимок, потому что первый мог не получиться.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a12')">Показать ответ</button>
+            <div id="a12" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>Было: придаточное <strong>причины</strong>. Стало: «На улице уже довольно свежо, <strong>так что</strong> надо потеплее одеться» — придаточное <strong>следствия</strong>.</li>
+                    <li>Было: <strong>причины</strong>. Стало: «Первый мог не получиться, <strong>так что</strong> придётся сделать второй снимок» — <strong>следствия</strong>.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ БЛОК 5. §27 ============ -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§27. Образа действия, меры и степени, сравнительные</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория</h3>
+        <div class="conj-grid">
+            <div class="conj-card">
+                <h4>🎭 Образа действия</h4>
+                <p><strong>Вопросы:</strong> как? каким образом?</p>
+                <p><strong>Союзы и союзные слова:</strong> что, чтобы, как, насколько</p>
+                <p><em>Герои действуют так, <strong>как</strong> соответствует их характерам.</em></p>
+            </div>
+            <div class="conj-card">
+                <h4>📏 Меры и степени</h4>
+                <p><strong>Вопросы:</strong> как? насколько? до какой степени?</p>
+                <p><strong>Пары с указательными словами:</strong> <span class="highlight">так — что, такой — что, столько — что, настолько — что</span></p>
+                <p><em>Язык прозы Пушкина так точен, <strong>что</strong> его способен понять каждый.</em></p>
+            </div>
+            <div class="conj-card">
+                <h4>⚖️ Сравнительные</h4>
+                <p><strong>Вопросы:</strong> как? подобно чему?</p>
+                <p><strong>Союзы:</strong> как, словно, будто, как будто, точно, как если бы</p>
+                <p><em>Восторг его гас, <strong>как</strong> гаснет свеча от порыва ветра.</em></p>
+            </div>
+        </div>
+
+        <div class="theory-box">
+            <p><span class="highlight">Сравнительное придаточное — это часть сложного предложения (две основы), а сравнительный оборот — член простого предложения (одна основа).</span> Оборота с союзами <em>как, словно, будто</em> выделяются запятыми внутри простого предложения.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Определи вид</div>
+            <ol>
+                <li>После войны в Пушкинских Горах нужно было восстановить всё так, как это было при Пушкине.</li>
+                <li>Стихотворение так густо насыщено приметами эпохи, что кажется, прочитал целый том.</li>
+                <li>Как лампада бледнеет пред ясным восходом зари, так ложная мудрость мерцает пред солнцем бессмертным ума.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a13')">Показать ответ</button>
+            <div id="a13" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>образа действия (как?);</li>
+                    <li>меры и степени (насколько?);</li>
+                    <li>сравнительное (подобно чему?).</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Запятые: оборот или придаточное?</div>
+            <ol>
+                <li>Круглое гнездо аиста как большая серая ватрушка лежит на дереве.</li>
+                <li>Звуки падали из горлышка чистыми как будто хрустальными каплями.</li>
+                <li>Восторг его гас как гаснет свеча от сильного порыва ветра.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a14')">Показать ответ</button>
+            <div id="a14" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>Круглое гнездо аиста<span class="highlight">,</span> как большая серая ватрушка<span class="highlight">,</span> лежит на дереве. — сравнительный <strong>оборот</strong> (одна основа);</li>
+                    <li>…чистыми<span class="highlight">,</span> как будто хрустальными<span class="highlight">,</span> каплями. — <strong>оборот</strong>;</li>
+                    <li>Восторг его гас<span class="highlight">,</span> как гаснет свеча от сильного порыва ветра. — сравнительное <strong>придаточное</strong> (две основы: восторг гас; свеча гаснет).</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 3 (сложнее). Сравни и объясни</div>
+            <p>Чем отличаются предложения? Докажи через грамматические основы и придумай свою пару:</p>
+            <ol>
+                <li>Его восторг гас, как гаснет свеча от порыва ветра.</li>
+                <li>Его восторг гас, как свеча от порыва ветра.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a15')">Показать ответ</button>
+            <div id="a15" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p>1) Две основы (<em>восторг гас</em>, <em>свеча гаснет</em>) → сложноподчинённое со сравнительным придаточным.</p>
+                <p>2) Одна основа (<em>восторг гас</em>) → простое предложение со сравнительным оборотом.</p>
+                <p>Своя пара, например: «Дождь шумел, как шумит море в шторм» / «Дождь шумел, как море в шторм».</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ БЛОК 6. §28 ============ -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§28. Несколько придаточных. Знаки препинания</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория: многочленные предложения</h3>
+        <div class="theory-box">
+            <p>Если придаточных два и более, предложение называется <strong>многочленным</strong>. Виды подчинительной связи:</p>
+            <ul>
+                <li><span class="highlight">Соподчинение однородное</span>: придаточные одного вида, относятся к одному слову или всему главному. Запятая между ними — как между однородными членами (перед одиночным <em>и, а, или</em> запятая НЕ ставится).</li>
+                <li><span class="highlight">Соподчинение неоднородное</span>: придаточные разных видов или относятся к разным словам. Запятая ставится всегда.</li>
+                <li><span class="highlight">Последовательное подчинение</span>: придаточные зависят друг от друга «цепочкой». Запятая между ними ставится.</li>
+            </ul>
+        </div>
+
+        <div class="visual-diagram">
+            <div class="diagram-title">Схемы</div>
+            <div class="scheme-box">однородное: [ … ], (1 когда …) и (2 когда …).</div>
+            <div class="scheme-box">последовательное: [ … ], (1 что …), (2 если …).</div>
+        </div>
+
+        <div class="oge-tip">
+            <div class="oge-tip-title">⚠️ Ловушка: стык союзов</div>
+            <p>Если рядом оказались союзы <em>что и если</em>, <em>что и когда</em>, <em>так что и хотя</em>, запятая между ними <span class="highlight">ставится</span>, НО <span class="highlight">не ставится</span>, если дальше идёт вторая часть союза — <em>то, так, тем</em>: «Она сказала ему, что если он болен, <strong>то</strong> надо лечиться».</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Сколько придаточных и как связаны?</div>
+            <ol>
+                <li>Белым камнем тот день отмечу, когда я о победе пела, когда я, обгоняя солнце, летела навстречу.</li>
+                <li>И лишь хочу, чтобы взяла букет эта девушка, которую люблю.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a16')">Показать ответ</button>
+            <div id="a16" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>Два придаточных времени, относятся к одному слову «день» → <strong>однородное соподчинение</strong>.</li>
+                    <li>Два придаточных: цели («чтобы взяла…») и определительное («которую люблю»), второе зависит от первого → <strong>последовательное подчинение</strong>.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Запятые и вид связи</div>
+            <ol>
+                <li>Она мечтала вслух о том как она будет жить в будущем и какая это будет интересная жизнь.</li>
+                <li>У костра остался проводник который пока путешественники охотились приготовил ужин.</li>
+                <li>Нет сомнения что он создал наш поэтический язык и что нам останется только идти по пути его гения.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a17')">Показать ответ</button>
+            <div id="a17" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>…о том<span class="highlight">,</span> как она будет жить в будущем и какая это будет интересная жизнь. — <strong>однородное</strong>, перед <em>и</em> запятая НЕ нужна;</li>
+                    <li>…проводник<span class="highlight">,</span> который<span class="highlight">,</span> пока путешественники охотились<span class="highlight">,</span> приготовил ужин. — <strong>последовательное</strong> (внутри определительного — придаточное времени);</li>
+                    <li>Нет сомнения<span class="highlight">,</span> что он создал… и что нам останется… — <strong>однородное</strong>, перед <em>и</em> запятой нет.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 3 (сложнее). Стык союзов: ставить запятую?</div>
+            <p>Сравни предложения и объясни, почему в первом между <em>что</em> и <em>если</em> запятая НЕ нужна, а во втором — нужна:</p>
+            <ol>
+                <li>Она сказала ему, что если он болен, то надо лечиться.</li>
+                <li>Он знал, что, если начнётся дождь, поход отменят.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a18')">Показать ответ</button>
+            <div id="a18" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p>1) Дальше идёт вторая часть союза — <strong>то</strong>, поэтому запятая между <em>что</em> и <em>если</em> не ставится (придаточное с «если» нельзя изъять без поломки конструкции).</p>
+                <p>2) Второй части союза (<em>то, так, тем</em>) нет, поэтому между стыком союзов запятая ставится: «что, если…».</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ БЛОК 7. §29-30 + ОГЭ ============ -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§29–30. Разбор СПП + формат ОГЭ</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория: порядок разбора</h3>
+        <div class="theory-box">
+            <p><strong>Синтаксический разбор:</strong> 1) вид по цели и интонации; 2) простые предложения и их основы; 3) тип связи; 4) главное и придаточное; 5) место придаточного; 6) к чему относится и чем присоединяется; 7) средства связи; 8) вид СПП.</p>
+            <p><strong>Пунктуационный разбор:</strong> 1) знаки завершения; 2) знаки выделения придаточного; 3) знаки разделения и выделения внутри каждого простого предложения.</p>
+            <p><em>Образец:</em> «К чести нашей народной гордости надобно заметить, что в русском сердце всегда обитает прекрасное чувство…» — повествовательное, сложное, СПП с придаточным изъяснительным после главного; средство связи — союз <em>что</em>.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 1. Синтаксический разбор</div>
+            <p>Выполни разбор предложения: <em>Все знают: слоны в диковинку у нас.</em> и <em>Известно, что слоны в диковинку у нас.</em> Чем они различаются?</p>
+            <button class="btn" onclick="toggleAnswer('a19')">Показать ответ</button>
+            <div id="a19" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p>Первое — <strong>бессоюзное</strong> сложное (связь интонацией, двоеточие). Второе — <strong>СПП</strong>: главное «известно», придаточное изъяснительное «что слоны в диковинку у нас» после главного, средство связи — союз <em>что</em>, запятая — знак выделения придаточного.</p>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Формат задания 3 ОГЭ (характеристика предложений)</div>
+            <p>Укажи номера верных утверждений:</p>
+            <blockquote>
+                (1) Книга, лежавшая на моём столе, исчезла.<br>
+                (2) Когда дождь стих, мы вышли на улицу.<br>
+                (3) Солнце светило ярко, и лужи блестели, как зеркала.<br>
+                (4) Я не знаю, почему мой друг грустит.
+            </blockquote>
+            <ol>
+                <li>Предложение 1 — простое с обособленным определением.</li>
+                <li>Предложение 2 — СПП с придаточным времени, придаточное стоит перед главным.</li>
+                <li>Предложение 3 — сложноподчинённое.</li>
+                <li>Предложение 4 — СПП с придаточным изъяснительным.</li>
+                <li>Предложение 4 — простое с однородными членами.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('a20')">Показать ответ</button>
+            <div id="a20" class="answer-box">
+                <div class="answer-title">✅ Ответ: 124</div>
+                <ul>
+                    <li>1 — верно (причастный оборот после определяемого слова);</li>
+                    <li>2 — верно;</li>
+                    <li>3 — неверно: это ССП с сравнительным оборотом во второй части;</li>
+                    <li>4 — верно (не знаю <em>чего? / почему?</em>);</li>
+                    <li>5 — неверно: две основы (я не знаю; друг грустит).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 3. Формат задания 5 ОГЭ (цифры на месте запятых)</div>
+            <p>Укажи цифры, на месте которых должны стоять запятые:</p>
+            <blockquote>Стало известно(1) что выставка(2) открывшаяся в музее(3) продлится до осени(4) и вход на неё будет свободным.</blockquote>
+            <button class="btn" onclick="toggleAnswer('a21')">Показать ответ</button>
+            <div id="a21" class="answer-box">
+                <div class="answer-title">✅ Ответ: 134… проверь себя: 1, 3, 4? Нет — читай объяснение</div>
+                <p>Верный ответ: <strong>124</strong>? Разберёмся: запятая 1 — перед придаточным изъяснительным («что…»). Запятые 2 и 3? Причастный оборот «открывшаяся в музее» стоит ПОСЛЕ определяемого слова «выставка» → запятые на местах 2 и 3. Перед «и» (место 4) запятая НЕ нужна: внутри придаточного две основы соединены одиночным союзом <em>и</em> (выставка продлится и вход будет свободным).</p>
+                <p>Итог: <strong>123</strong>.</p>
+                <p>Запись: «Стало известно, что выставка, открывшаяся в музее, продлится до осени и вход на неё будет свободным.»</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ ЧЕК-ЛИСТ ============ -->
+<div class="topic-block final-block">
+    <h2>🎓 Итоговый чек-лист</h2>
+    <div class="checklist-grid">
+        <div class="checklist-col">
+            <h3>✅ Я знаю:</h3>
+            <ul>
+                <li>три группы придаточных и их виды</li>
+                <li>вопросы и средства связи каждого вида</li>
+                <li>пары указательных слов (так — что, там — где)</li>
+                <li>виды связи в многочленных СПП</li>
+                <li>правило стыка союзов (что + если)</li>
+            </ul>
+        </div>
+        <div class="checklist-col">
+            <h3>✅ Я умею:</h3>
+            <ul>
+                <li>определять вид придаточного по вопросу</li>
+                <li>отличать сравнительное придаточное от оборота</li>
+                <li>строить схемы многочленных СПП</li>
+                <li>расставлять запятые при однородных придаточных</li>
+                <li>выполнять синтаксический и пунктуационный разбор</li>
+            </ul>
+        </div>
+    </div>
+    <div class="final-message">
+        <h3>Отличная работа!</h3>
+        <p>Ты прошёл(ла) весь блок видов придаточных. Дальше — бессоюзные сложные предложения, а эта база пригодится и в ОГЭ, и в собственном письме.</p>
+        <p style="font-size:1.1em; margin-top:10px; color:#4a6fa5;"><strong>У тебя всё получится!</strong> 💪</p>
+    </div>
+</div>
+
+</div>
+<script>
+function toggleAnswer(id) {
+    const box = document.getElementById(id);
+    if (box.style.display === 'block') { box.style.display = 'none'; }
+    else { box.style.display = 'block'; box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+}
+</script>
+</body>
+</html>

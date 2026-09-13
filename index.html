@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Карта курса «Русский язык, 9 класс»: все темы года по модулям, от повторения за 5-8 класс до итогового систематизирующего повторения.">
+<title>Русский язык 9 класс | Карта курса</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.7; color: #2c3e50; background: #f5f7fa; min-height: 100vh; }
+    .container { max-width: 960px; margin: 0 auto; padding: 30px 20px 60px; }
+
+    header { background: #fff; padding: 35px 30px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.06); margin-bottom: 35px; text-align: center; border-top: 4px solid #4a6fa5; }
+    h1 { color: #2c3e50; font-size: 2.2em; margin-bottom: 10px; font-weight: 600; }
+    .subtitle { color: #5a6c7d; font-size: 1.1em; font-style: italic; margin-bottom: 18px; }
+    .stats { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .stat { background: #eef3f9; color: #4a6fa5; font-size: .9em; font-weight: 600; padding: 6px 16px; border-radius: 16px; }
+
+    /* ===== Карта курса ===== */
+    .map { position: relative; }
+    .map::before { content: ''; position: absolute; left: 26px; top: 10px; bottom: 10px; width: 3px; background: #dfe6ee; border-radius: 2px; }
+
+    .module { position: relative; padding-left: 72px; margin-bottom: 20px; }
+    .node { position: absolute; left: 0; top: 0; width: 54px; height: 54px; border-radius: 50%; background: #fff; border: 3px solid #4a6fa5; color: #4a6fa5; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25em; z-index: 1; }
+    .module.soon .node { border-color: #b9c4cf; color: #8a97a5; }
+
+    .card { background: #fff; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.05); overflow: hidden; }
+    .mod-head { width: 100%; background: none; border: none; font-family: inherit; text-align: left; cursor: pointer; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .mod-head:hover { background: #fafcfe; }
+    .mod-title h2 { font-size: 1.25em; color: #2c3e50; font-weight: 600; margin-bottom: 4px; }
+    .mod-meta { font-size: .88em; color: #5a6c7d; }
+    .head-right { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .status { font-size: .78em; font-weight: 600; padding: 4px 12px; border-radius: 12px; white-space: nowrap; }
+    .status.ready { background: #e8f5e9; color: #4a7a4a; }
+    .status.soon { background: #fdf3e3; color: #8b6f3a; }
+    .chev { width: 12px; height: 12px; border-right: 2.5px solid #4a6fa5; border-bottom: 2.5px solid #4a6fa5; transform: rotate(45deg); transition: transform .25s; margin-top: -4px; }
+    .module.open .chev { transform: rotate(225deg); margin-top: 4px; }
+
+    .mod-body { display: none; border-top: 1px solid #e8ecf1; padding: 20px 22px 22px; animation: fade .3s; }
+    .module.open .mod-body { display: block; }
+    @keyframes fade { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+    .topics { list-style: none; margin-bottom: 18px; }
+    .topics li { display: flex; gap: 12px; align-items: baseline; padding: 7px 0; border-bottom: 1px dashed #e0e6ed; font-size: .98em; }
+    .topics li:last-child { border-bottom: none; }
+    .par { background: #eef3f9; color: #4a6fa5; font-size: .8em; font-weight: 700; padding: 2px 9px; border-radius: 6px; white-space: nowrap; }
+
+    .mod-footer { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .mod-note { font-size: .88em; color: #5a6c7d; font-style: italic; }
+    .btn-go { display: inline-block; background: #4a6fa5; color: #fff; text-decoration: none; font-weight: 600; font-size: .95em; padding: 11px 28px; border-radius: 6px; transition: background .2s; }
+    .btn-go:hover { background: #3a5a8a; }
+    .btn-soon { display: inline-block; background: #eef1f4; color: #8a97a5; font-weight: 600; font-size: .95em; padding: 11px 28px; border-radius: 6px; cursor: not-allowed; }
+
+    .legend { margin-top: 34px; background: #fff; border-radius: 12px; padding: 20px 24px; box-shadow: 0 2px 10px rgba(0,0,0,.05); font-size: .92em; color: #5a6c7d; }
+    .legend b { color: #4a6fa5; }
+
+    @media (max-width: 640px) {
+        h1 { font-size: 1.7em; }
+        .map::before { left: 20px; }
+        .module { padding-left: 56px; }
+        .node { width: 42px; height: 42px; font-size: 1.05em; }
+        .mod-head { flex-direction: column; align-items: flex-start; gap: 10px; }
+        .head-right { width: 100%; justify-content: space-between; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+    <h1>Русский язык · 9 класс</h1>
+    <p class="subtitle">Карта курса: от повторения за 5–8 класс до итогового обзора перед экзаменом</p>
+    <div class="stats">
+        <span class="stat">8 модулей</span>
+        <span class="stat">47 параграфов</span>
+        <span class="stat">5 уроков уже открыты</span>
+    </div>
+</header>
+
+<div class="map">
+
+    <!-- МОДУЛЬ 1 -->
+    <div class="module">
+        <div class="node">1</div>
+        <div class="card">
+            <button class="mod-head" aria-expanded="false">
+                <div class="mod-title">
+                    <h2>Повторение изученного в 5–8 классах</h2>
+                    <div class="mod-meta">§1–6 · стр. 9–23 · фундамент курса</div>
+                </div>
+                <div class="head-right"><span class="status ready">урок открыт</span><span class="chev"></span></div>
+            </button>
+            <div class="mod-body">
+                <ul class="topics">
+                    <li><span class="par">§1</span> Устная и письменная речь</li>
+                    <li><span class="par">§2</span> Монолог, диалог</li>
+                    <li><span class="par">§3</span> Стили речи</li>
+                    <li><span class="par">§4</span> Простое предложение и его грамматическая основа</li>
+                    <li><span class="par">§5</span> Предложения с обособленными членами</li>
+                    <li><span class="par">§6</span> Обращения, вводные слова и вставные конструкции</li>
+                </ul>
+                <div class="mod-footer">
+                    <span class="mod-note">Теория + практика с ответами по кнопке</span>
+                    <a class="btn-go" href="lesson-01-povtorenie-5-8.html">Перейти →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- МОДУЛЬ 2 -->
+    <div class="module">
+        <div class="node">2</div>
+        <div class="card">
+            <button class="mod-head" aria-expanded="false">
+                <div class="mod-title">
+                    <h2>Сложное предложение. Культура речи</h2>
+                    <div class="mod-meta">§7–10 · стр. 24–35 · вход в большую тему года</div>
+                </div>
+                <div class="head-right"><span class="status ready">урок открыт</span><span class="chev"></span></div>
+            </button>
+            <div class="mod-body">
+                <ul class="topics">
+                    <li><span class="par">§7</span> Понятие о сложном предложении</li>
+                    <li><span class="par">§8</span> Союзные и бессоюзные сложные предложения</li>
+                    <li><span class="par">§9</span> Разделительные и выделительные знаки препинания между частями сложного предложения</li>
+                    <li><span class="par">§10</span> Интонация сложного предложения</li>
+                </ul>
+                <div class="mod-footer">
+                    <span class="mod-note">Схемы, интонационные модели, практика</span>
+                    <a class="btn-go" href="lesson-02-slozhnoe-predlozhenie.html">Перейти →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- МОДУЛЬ 3 -->
+    <div class="module">
+        <div class="node">3</div>
+        <div class="card">
+            <button class="mod-head" aria-expanded="false">
+                <div class="mod-title">
+                    <h2>Сложносочинённые предложения</h2>
+                    <div class="mod-meta">§11–17 · стр. 36–51 · союзы и, а, но, то…то</div>
+                </div>
+                <div class="head-right"><span class="status ready">урок открыт</span><span class="chev"></span></div>
+            </button>
+            <div class="mod-body">
+                <ul class="topics">
+                    <li><span class="par">§11</span> Понятие о сложносочинённом предложении</li>
+                    <li><span class="par">§12</span> Смысловые отношения в сложносочинённых предложениях</li>
+                    <li><span class="par">§13</span> Сложносочинённые предложения с соединительными союзами</li>
+                    <li><span class="par">§14</span> Сложносочинённые предложения с разделительными союзами</li>
+                    <li><span class="par">§15</span> Сложносочинённые предложения с противительными союзами</li>
+                    <li><span class="par">§16</span> Разделительные знаки препинания между частями сложносочинённого предложения</li>
+                    <li><span class="par">§17</span> Синтаксический и пунктуационный разбор сложносочинённого предложения</li>
+                </ul>
+                <div class="mod-footer">
+                    <span class="mod-note">Три группы союзов + ловушки пунктуации</span>
+                    <a class="btn-go" href="lesson-03-slozhnosochinennye.html">Перейти →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- МОДУЛЬ 4 -->
+    <div class="module">
+        <div class="node">4</div>
+        <div class="card">
+            <button class="mod-head" aria-expanded="false">
+                <div class="mod-title">
+                    <h2>Сложноподчинённые предложения</h2>
+                    <div class="mod-meta">§18–21 · стр. 52–72 · главное и придаточное</div>
+                </div>
+                <div class="head-right"><span class="status ready">урок открыт</span><span class="chev"></span></div>
+            </button>
+            <div class="mod-body">
+                <ul class="topics">
+                    <li><span class="par">§18</span> Понятие о сложноподчинённом предложении</li>
+                    <li><span class="par">§19</span> Место придаточного по отношению к главному. Знаки препинания</li>
+                    <li><span class="par">§20</span> Союзы и союзные слова в сложноподчинённом предложении</li>
+                    <li><span class="par">§21</span> Роль указательных слов в сложноподчинённом предложении</li>
+                </ul>
+                <div class="mod-footer">
+                    <span class="mod-note">Союз или союзное слово? Учимся различать</span>
+                    <a class="btn-go" href="lesson-04-slozhnopodchinennye.html">Перейти →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- МОДУЛЬ 5 -->
+    <div class="module">
+        <div class="node">5</div>
+        <div class="card">
+            <button class="mod-head" aria-expanded="false">
+                <div class="mod-title">
+                    <h2>Основные группы сложноподчинённых предложений</h2>
+                    <div class="mod-meta">§22–30 · стр. 73–122 · самый объёмный модуль</div>
+                </div>
+                <div class="head-right"><span class="status ready">урок открыт</span><span class="chev"></span></div>
+            </button>
+            <div class="mod-body">
+                <ul class="topics">
+                    <li><span class="par">§22</span> СПП с придаточными определительными</li>
+                    <li><span class="par">§23</span> СПП с придаточными изъяснительными</li>
+                    <li><span class="par">§24</span> СПП с придаточными обстоятельственными</li>
+                    <li><span class="par">§25</span> СПП с придаточными времени и места</li>
+                    <li><span class="par">§26</span> СПП с придаточными цели, причины, условия, уступки, следствия</li>
+                    <li><span class="par">§27</span> СПП с придаточными образа действия, меры и степени, сравнительными</li>
+                    <li><span class="par">§28</span> СПП с несколькими придаточными. Знаки препинания при них</li>
+                    <li><span class="par">§29</span> Синтаксический разбор сложноподчинённого предложения</li>
+                    <li><span class="par">§30</span> Пунктуационный разбор сложноподчинённого предложения</li>
+                </ul>
+                <div class="mod-footer">
+                    <span class="mod-note">Все виды придаточных + многочленные СПП</span>
+                    <a class="btn-go" href="lesson-05-gruppy-spp.html">Перейти →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- МОДУЛЬ 6 -->
+    <div class="module soon">
+        <div class="node">6</div>
+        <div class="card">
+            <button class="mod-head" aria-expanded="false">
+                <div class="mod-title">
+                    <h2>Бессоюзные сложные предложения</h2>
+                    <div class="mod-meta">§31–36 · стр. 123–142 · запятая, двоеточие, тире</div>
+                </div>
+                <div class="head-right"><span class="status soon">скоро</span><span class="chev"></span></div>
+            </button>
+            <div class="mod-body">
+                <ul class="topics">
+                    <li><span class="par">§31</span> Понятие о бессоюзном сложном предложении</li>
+                    <li><span class="par">§32</span> Интонация в бессоюзных сложных предложениях</li>
+                    <li><span class="par">§33</span> БСП со значением перечисления. Запятая и точка с запятой</li>
+                    <li><span class="par">§34</span> БСП со значением причины, пояснения, дополнения. Двоеточие</li>
+                    <li><span class="par">§35</span> БСП со значением противопоставления, времени, условия и следствия. Тире</li>
+                    <li><span class="par">§36</span> Синтаксический и пунктуационный разбор бессоюзного сложного предложения</li>
+                </ul>
+                <div class="mod-footer">
+                    <span class="mod-note">Урок готовится к открытию</span>
+                    <span class="btn-soon">Скоро</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- МОДУЛЬ 7 — расширен: включает публичную речь -->
+    <div class="module soon">
+        <div class="node">7</div>
+        <div class="card">
+            <button class="mod-head" aria-expanded="false">
+                <div class="mod-title">
+                    <h2>Сложные предложения с различными видами связи. Публичная речь</h2>
+                    <div class="mod-meta">§37–40 · стр. 143–155 · вершина синтаксиса и культура выступления</div>
+                </div>
+                <div class="head-right"><span class="status soon">скоро</span><span class="chev"></span></div>
+            </button>
+            <div class="mod-body">
+                <ul class="topics">
+                    <li><span class="par">§37</span> Употребление союзной (сочинительной и подчинительной) и бессоюзной связи в сложных предложениях</li>
+                    <li><span class="par">§38</span> Знаки препинания в сложных предложениях с различными видами связи</li>
+                    <li><span class="par">§39</span> Синтаксический и пунктуационный разбор сложного предложения с различными видами связи</li>
+                    <li><span class="par">§40</span> Публичная речь</li>
+                </ul>
+                <div class="mod-footer">
+                    <span class="mod-note">Самые сложные конструкции + практика выступления</span>
+                    <span class="btn-soon">Скоро</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- МОДУЛЬ 8 (бывший 9) -->
+    <div class="module soon">
+        <div class="node">8</div>
+        <div class="card">
+            <button class="mod-head" aria-expanded="false">
+                <div class="mod-title">
+                    <h2>Повторение и систематизация изученного в 5–9 классах</h2>
+                    <div class="mod-meta">§41–47 · стр. 159–186 · финальный обзор перед экзаменом</div>
+                </div>
+                <div class="head-right"><span class="status soon">скоро</span><span class="chev"></span></div>
+            </button>
+            <div class="mod-body">
+                <ul class="topics">
+                    <li><span class="par">§41</span> Фонетика и графика</li>
+                    <li><span class="par">§42</span> Лексикология (лексика) и фразеология</li>
+                    <li><span class="par">§43</span> Морфемика</li>
+                    <li><span class="par">§44</span> Словообразование</li>
+                    <li><span class="par">§45</span> Морфология</li>
+                    <li><span class="par">§46</span> Синтаксис</li>
+                    <li><span class="par">§47</span> Орфография. Пунктуация</li>
+                </ul>
+                <div class="mod-footer">
+                    <span class="mod-note">Урок готовится к открытию</span>
+                    <span class="btn-soon">Скоро</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="legend">
+    <b>Как пользоваться картой:</b> нажмите на модуль, чтобы раскрыть его содержание — список параграфов и тем. Кнопка <b>«Перейти»</b> ведёт на интерактивный урок с теорией, практикой и ответами по кнопке. Модули со статусом <b>«скоро»</b> откроются по мере прохождения курса.
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll('.mod-head').forEach(function (head) {
+    head.addEventListener('click', function () {
+        var module = head.closest('.module');
+        var isOpen = module.classList.toggle('open');
+        head.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+});
+</script>
+</body>
+</html>
