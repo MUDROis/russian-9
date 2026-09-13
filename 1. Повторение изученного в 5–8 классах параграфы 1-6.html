@@ -1,996 +1,566 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Интерактивный урок по русскому языку для 9 класса. Повторение изученного в 5-8 классах.">
-    <title>Повторение 5-8 классов | Русский язык 9 класс</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.7;
-            color: #2c3e50;
-            background: #f5f7fa;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-
-        header {
-            background: #ffffff;
-            padding: 35px 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-            margin-bottom: 30px;
-            text-align: center;
-            border-top: 4px solid #4a6fa5;
-        }
-
-        h1 {
-            color: #2c3e50;
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .subtitle {
-            color: #5a6c7d;
-            font-size: 1.15em;
-            font-style: italic;
-        }
-
-        .topic-block {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 35px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-        }
-
-        .topic-header {
-            background: #4a6fa5;
-            color: #ffffff;
-            padding: 18px 25px;
-            border-radius: 8px;
-            margin: -35px -35px 30px -35px;
-        }
-
-        h2 {
-            font-size: 1.6em;
-            font-weight: 600;
-        }
-
-        .section {
-            margin-bottom: 35px;
-        }
-
-        .section-title {
-            color: #4a6fa5;
-            font-size: 1.3em;
-            margin-bottom: 18px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #e0e6ed;
-            font-weight: 600;
-        }
-
-        .theory-box {
-            background: #f8f9fb;
-            border-left: 4px solid #4a6fa5;
-            padding: 20px 25px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
-
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-        }
-
-        .comparison-table th {
-            background: #4a6fa5;
-            color: #ffffff;
-            padding: 14px 18px;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .comparison-table td {
-            padding: 14px 18px;
-            border-bottom: 1px solid #e8ecf1;
-            color: #2c3e50;
-        }
-
-        .comparison-table tr:nth-child(even) {
-            background: #f8f9fb;
-        }
-
-        .visual-diagram {
-            background: #f8f9fb;
-            border: 1px solid #e0e6ed;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .diagram-title {
-            font-weight: 600;
-            color: #4a6fa5;
-            margin-bottom: 15px;
-            font-size: 1.05em;
-        }
-
-        .speech-flow {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .flow-box {
-            background: #ffffff;
-            color: #2c3e50;
-            padding: 20px 25px;
-            border-radius: 8px;
-            min-width: 160px;
-            text-align: center;
-            border: 2px solid #4a6fa5;
-            box-shadow: 0 2px 8px rgba(74,111,165,0.08);
-        }
-
-        .flow-box > div {
-            font-weight: 600;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .flow-box small {
-            color: #5a6c7d;
-        }
-
-        .arrow {
-            font-size: 1.8em;
-            color: #4a6fa5;
-            font-weight: bold;
-        }
-
-        .real-life-example {
-            background: #f0f7f0;
-            border-left: 4px solid #6a9a6a;
-            padding: 20px 25px;
-            border-radius: 6px;
-            margin: 20px 0;
-        }
-
-        .example-title {
-            color: #4a7a4a;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .practice-task {
-            background: #fffaf0;
-            border: 1px solid #f0dcb8;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 25px 0;
-        }
-
-        .task-title {
-            color: #8b6f3a;
-            font-weight: 600;
-            font-size: 1.15em;
-            margin-bottom: 15px;
-        }
-
-        .btn {
-            background: #4a6fa5;
-            color: #ffffff;
-            border: none;
-            padding: 11px 26px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.95em;
-            font-weight: 600;
-            margin: 10px 5px 10px 0;
-            transition: background 0.2s;
-            font-family: inherit;
-        }
-
-        .btn:hover {
-            background: #3a5a8a;
-        }
-
-        .answer-box {
-            display: none;
-            background: #f0f5fa;
-            border: 1px solid #c8d8e8;
-            border-radius: 8px;
-            padding: 20px 25px;
-            margin-top: 15px;
-        }
-
-        .answer-title {
-            color: #4a6fa5;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .style-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-            margin: 20px 0;
-        }
-
-        .style-card {
-            background: #ffffff;
-            color: #2c3e50;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #e0e6ed;
-            border-left: 4px solid #4a6fa5;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-        }
-
-        .style-card h4 {
-            margin-bottom: 10px;
-            font-size: 1.1em;
-            color: #4a6fa5;
-        }
-
-        .style-card p {
-            margin-bottom: 6px;
-            font-size: 0.95em;
-        }
-
-        .style-card p strong {
-            color: #5a6c7d;
-        }
-
-        .grammar-scheme {
-            background: #f8f9fb;
-            padding: 20px 25px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border: 1px solid #e0e6ed;
-        }
-
-        .highlight {
-            background: #fff3c4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-weight: 600;
-        }
-
-        .oge-tip {
-            background: #f8f4f0;
-            border-left: 4px solid #b8865a;
-            padding: 18px 22px;
-            border-radius: 6px;
-            margin: 20px 0;
-        }
-
-        .oge-tip-title {
-            color: #8b6f3a;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        blockquote {
-            background: #ffffff;
-            padding: 15px 20px;
-            border-radius: 6px;
-            margin: 10px 0;
-            border-left: 3px solid #c8d8e8;
-            font-style: italic;
-        }
-
-        ul, ol {
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        strong {
-            color: #4a6fa5;
-            font-weight: 600;
-        }
-
-        .final-block {
-            background: #ffffff;
-            border-top: 4px solid #4a6fa5;
-        }
-
-        .final-block h2 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .checklist-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 25px;
-        }
-
-        .checklist-col h3 {
-            color: #4a6fa5;
-            margin-bottom: 15px;
-            font-size: 1.15em;
-        }
-
-        .checklist-col ul {
-            list-style: none;
-            margin-left: 0;
-        }
-
-        .checklist-col li {
-            padding: 6px 0;
-            border-bottom: 1px dashed #e0e6ed;
-        }
-
-        .checklist-col li:before {
-            content: "☐ ";
-            color: #4a6fa5;
-            font-weight: bold;
-        }
-
-        .final-message {
-            text-align: center;
-            padding: 25px;
-            background: #f8f9fb;
-            border-radius: 8px;
-            border: 1px solid #e0e6ed;
-        }
-
-        .final-message h3 {
-            color: #4a6fa5;
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 1.7em; }
-            h2 { font-size: 1.3em; }
-            .topic-block { padding: 20px; }
-            .topic-header { margin: -20px -20px 25px -20px; padding: 15px 20px; }
-            .speech-flow { flex-direction: column; }
-            .arrow { transform: rotate(90deg); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Урок русского языка, 9 класс: повторение изученного в 5-8 классах (§1-6). Теория, практика, ответы по кнопке, формат ОГЭ.">
+<title>Повторение 5–8 классов | Русский язык 9 класс</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.7; color: #2c3e50; background: #f5f7fa; min-height: 100vh; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 30px 20px; }
+    header { background: #fff; padding: 35px 30px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.06); margin-bottom: 30px; text-align: center; border-top: 4px solid #4a6fa5; }
+    h1 { color: #2c3e50; font-size: 2.2em; margin-bottom: 10px; font-weight: 600; }
+    .subtitle { color: #5a6c7d; font-size: 1.15em; font-style: italic; }
+    .topic-block { background: #fff; border-radius: 12px; padding: 35px; margin-bottom: 25px; box-shadow: 0 2px 12px rgba(0,0,0,.05); }
+    .topic-header { background: #4a6fa5; color: #fff; padding: 18px 25px; border-radius: 8px; margin: -35px -35px 30px -35px; }
+    h2 { font-size: 1.6em; font-weight: 600; }
+    .section { margin-bottom: 35px; }
+    .section-title { color: #4a6fa5; font-size: 1.3em; margin-bottom: 18px; padding-bottom: 8px; border-bottom: 2px solid #e0e6ed; font-weight: 600; }
+    .theory-box { background: #f8f9fb; border-left: 4px solid #4a6fa5; padding: 20px 25px; border-radius: 6px; margin-bottom: 20px; }
+    .visual-diagram { background: #f8f9fb; border: 1px solid #e0e6ed; border-radius: 8px; padding: 25px; margin: 20px 0; text-align: center; }
+    .diagram-title { font-weight: 600; color: #4a6fa5; margin-bottom: 15px; font-size: 1.05em; }
+    .speech-flow { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .flow-box { background: #fff; color: #2c3e50; padding: 20px 25px; border-radius: 8px; min-width: 160px; text-align: center; border: 2px solid #4a6fa5; box-shadow: 0 2px 8px rgba(74,111,165,.08); }
+    .flow-box > div { font-weight: 600; font-size: 1.1em; margin-bottom: 5px; }
+    .flow-box small { color: #5a6c7d; }
+    .arrow { font-size: 1.6em; color: #4a6fa5; font-weight: bold; }
+    .real-life-example { background: #f0f7f0; border-left: 4px solid #6a9a6a; padding: 20px 25px; border-radius: 6px; margin: 20px 0; }
+    .example-title { color: #4a7a4a; font-weight: 600; margin-bottom: 10px; }
+    .practice-task { background: #fffaf0; border: 1px solid #f0dcb8; border-radius: 8px; padding: 25px; margin: 25px 0; }
+    .task-title { color: #8b6f3a; font-weight: 600; font-size: 1.15em; margin-bottom: 15px; }
+    .btn { background: #4a6fa5; color: #fff; border: none; padding: 11px 26px; border-radius: 6px; cursor: pointer; font-size: .95em; font-weight: 600; margin: 10px 5px 10px 0; transition: background .2s; font-family: inherit; }
+    .btn:hover { background: #3a5a8a; }
+    .answer-box { display: none; background: #f0f5fa; border: 1px solid #c8d8e8; border-radius: 8px; padding: 20px 25px; margin-top: 15px; }
+    .answer-title { color: #4a6fa5; font-weight: 600; margin-bottom: 10px; }
+    .oge-tip { background: #f8f4f0; border-left: 4px solid #b8865a; padding: 18px 22px; border-radius: 6px; margin: 20px 0; }
+    .oge-tip-title { color: #8b6f3a; font-weight: 600; margin-bottom: 8px; }
+    blockquote { background: #fff; padding: 15px 20px; border-radius: 6px; margin: 10px 0; border-left: 3px solid #c8d8e8; font-style: italic; }
+    ul, ol { margin-left: 25px; margin-bottom: 15px; }
+    li { margin-bottom: 8px; }
+    strong { color: #4a6fa5; font-weight: 600; }
+    .highlight { background: #fff3c4; padding: 2px 6px; border-radius: 3px; font-weight: 600; }
+    .scheme-box { background: #f8f9fb; border: 2px solid #4a6fa5; border-radius: 8px; padding: 15px; margin: 15px 0; font-family: 'Courier New', monospace; text-align: center; font-weight: bold; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,.04); }
+    .comparison-table th { background: #4a6fa5; color: #fff; padding: 14px 18px; text-align: left; font-weight: 600; }
+    .comparison-table td { padding: 14px 18px; border-bottom: 1px solid #e8ecf1; }
+    .comparison-table tr:nth-child(even) { background: #f8f9fb; }
+    .conj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 20px 0; }
+    .conj-card { background: #fff; border: 1px solid #e0e6ed; border-left: 4px solid #4a6fa5; border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.04); }
+    .conj-card h4 { color: #4a6fa5; margin-bottom: 10px; font-size: 1.1em; }
+    .conj-card p { font-size: .95em; color: #5a6c7d; margin-bottom: 5px; }
+    .final-block { background: #fff; border-top: 4px solid #4a6fa5; }
+    .final-block h2 { color: #2c3e50; text-align: center; margin-bottom: 25px; }
+    .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 25px; }
+    .checklist-col h3 { color: #4a6fa5; margin-bottom: 15px; font-size: 1.15em; }
+    .checklist-col ul { list-style: none; margin-left: 0; }
+    .checklist-col li { padding: 6px 0; border-bottom: 1px dashed #e0e6ed; }
+    .checklist-col li:before { content: "☐ "; color: #4a6fa5; font-weight: bold; }
+    .final-message { text-align: center; padding: 25px; background: #f8f9fb; border-radius: 8px; border: 1px solid #e0e6ed; }
+    .final-message h3 { color: #4a6fa5; margin-bottom: 10px; }
+    @media (max-width: 768px) {
+        h1 { font-size: 1.7em; } h2 { font-size: 1.3em; }
+        .topic-block { padding: 20px; }
+        .topic-header { margin: -20px -20px 25px -20px; padding: 15px 20px; }
+        .speech-flow { flex-direction: column; }
+        .arrow { transform: rotate(90deg); }
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1> Русский язык</h1>
-            <p class="subtitle">Повторение изученного в 5–8 классах</p>
-        </header>
+<div class="container">
 
-        <!-- Тема 1: Устная и письменная речь -->
-        <div class="topic-block">
-            <div class="topic-header">
-                <h2>§1. Устная и письменная речь</h2>
-            </div>
+<header>
+    <h1>Русский язык</h1>
+    <p class="subtitle">Повторение изученного в 5–8 классах (§1–6 · стр. 9–23)</p>
+</header>
 
-            <div class="section">
-                <h3 class="section-title">🎯 Теория</h3>
-                
-                <div class="theory-box">
-                    <p><strong>Речь</strong> — это использование языка для общения. Она бывает двух форм:</p>
-                    
-                    <div class="visual-diagram">
-                        <div class="diagram-title">Схема видов речи</div>
-                        <div class="speech-flow">
-                            <div class="flow-box">
-                                <div>🗣️ Устная</div>
-                                <small>говорим — слышим</small>
-                            </div>
-                            <div class="arrow">⇄</div>
-                            <div class="flow-box">
-                                <div>️ Письменная</div>
-                                <small>пишем — читаем</small>
-                            </div>
-                        </div>
-                    </div>
+<!-- §1 -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§1. Устная и письменная речь</h2></div>
 
-                    <p><strong>Что объединяет:</strong> обе формы используют один и тот же язык, одни и те же слова и правила.</p>
-                </div>
-
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Признак</th>
-                            <th>Устная речь</th>
-                            <th>Письменная речь</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Как воспринимаем</strong></td>
-                            <td>👂 На слух, одновременно с говорением</td>
-                            <td>👁️ Читаем, можно вернуться к тексту</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Средства выразительности</strong></td>
-                            <td>🎵 Интонация, паузы, жесты, мимика</td>
-                            <td>📝 Знаки препинания, шрифт, абзацы</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Время на подготовку</strong></td>
-                            <td> Мгновенно, в момент разговора</td>
-                            <td>⏰ Есть время подумать и исправить</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Где используем</strong></td>
-                            <td>💬 Разговор с другом, звонок, выступление</td>
-                            <td>📧 Сообщение, письмо, сочинение</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="real-life-example">
-                    <div class="example-title">💡 Пример из жизни</div>
-                    <p>Представь, что ты объясняешь другу, как пройти к тебе домой:</p>
-                    <ul>
-                        <li><strong>Устно:</strong> говоришь быстро, показываешь жестами, используешь интонацию: «Поверни <em>налево</em> (поднимаешь руку), потом прямо до красного дома»</li>
-                        <li><strong>Письменно:</strong> пишешь в сообщении: «Поверните налево на улице Ленина, затем идите прямо 200 метров до дома №15 (красный кирпичный дом)»</li>
-                    </ul>
+    <div class="section">
+        <h3 class="section-title">🎯 Теория</h3>
+        <div class="theory-box">
+            <p><strong>Речь</strong> — это использование языка для общения. Она бывает двух форм:</p>
+            <div class="visual-diagram">
+                <div class="diagram-title">Схема видов речи</div>
+                <div class="speech-flow">
+                    <div class="flow-box"><div>🗣️ Устная</div><small>говорим — слышим</small></div>
+                    <div class="arrow">⇄</div>
+                    <div class="flow-box"><div>✍️ Письменная</div><small>пишем — читаем</small></div>
                 </div>
             </div>
-
-            <div class="section">
-                <h3 class="section-title">📝 Практика</h3>
-                
-                <div class="practice-task">
-                    <div class="task-title">Задание 1</div>
-                    <p>Прочитай фрагмент устного ответа ученика. Найди лишние слова и выражения («слова-паразиты»). Как они мешают восприятию?</p>
-                    <blockquote>
-                        «Значит... самое важное отличие Эллады от Египта... как бы в особой роли городов. Дело в том, что в Египте город был столицей... В Элладе... значит... каждый город... или, как говорили греки, полис, был независимой республикой... вот с народным собранием...»
-                    </blockquote>
-                    <button class="btn" onclick="toggleAnswer('answer1')">Показать ответ</button>
-                    <div id="answer1" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <p><strong>Лишние слова:</strong> «значит», «как бы», «дело в том, что», «вот», «именно».</p>
-                        <p><strong>Почему мешают:</strong></p>
-                        <ul>
-                            <li>Отвлекают внимание от содержания</li>
-                            <li>Создают впечатление неуверенности</li>
-                            <li>Замедляют речь</li>
-                            <li>Показывают, что говорящий не подготовился</li>
-                        </ul>
-                        <p><strong>Совет:</strong> в устной части экзамена старайся говорить без слов-паразитов — это влияет на оценку!</p>
-                    </div>
-                </div>
-
-                <div class="practice-task">
-                    <div class="task-title">Задание 2</div>
-                    <p>Подготовь устное сообщение (на 1 минуту) на тему: «Чем устная речь отличается от письменной». Используй примеры из своей жизни.</p>
-                    <button class="btn" onclick="toggleAnswer('answer2')">Показать план ответа</button>
-                    <div id="answer2" class="answer-box">
-                        <div class="answer-title">📋 План ответа</div>
-                        <ol>
-                            <li>Начни с определения: «Речь бывает устной и письменной...»</li>
-                            <li>Назови 2-3 главных отличия (средства выразительности, время на подготовку)</li>
-                            <li>Приведи пример: «Например, когда я звоню другу...»</li>
-                            <li>Сделай вывод: «Обе формы важны для общения»</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
+            <p><strong>Что объединяет:</strong> обе формы используют один и тот же язык, одни и те же слова и правила.</p>
         </div>
 
-        <!-- Тема 2: Монолог и диалог -->
-        <div class="topic-block">
-            <div class="topic-header">
-                <h2>§2. Монолог и диалог</h2>
-            </div>
+        <table class="comparison-table">
+            <thead>
+                <tr><th>Признак</th><th>Устная речь</th><th>Письменная речь</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Как воспринимаем</strong></td><td>👂 На слух, одновременно с говорением</td><td>👁️ Читаем, можно вернуться к тексту</td></tr>
+                <tr><td><strong>Средства выразительности</strong></td><td>🎵 Интонация, паузы, жесты, мимика</td><td>📝 Знаки препинания, шрифт, абзацы</td></tr>
+                <tr><td><strong>Время на подготовку</strong></td><td>⚡ Мгновенно, в момент разговора</td><td>⏰ Есть время подумать и исправить</td></tr>
+                <tr><td><strong>Где используем</strong></td><td>💬 Разговор с другом, звонок, выступление</td><td>📧 Сообщение, письмо, сочинение</td></tr>
+            </tbody>
+        </table>
 
-            <div class="section">
-                <h3 class="section-title"> Теория</h3>
-                
-                <div class="theory-box">
-                    <p>Виды речи выделяются <strong>по смене говорящего и слушающего</strong>:</p>
-                    
-                    <div class="visual-diagram">
-                        <div class="diagram-title">Виды речи</div>
-                        <div class="speech-flow">
-                            <div class="flow-box">
-                                <div>🎤 Монолог</div>
-                                <small>один говорит</small>
-                            </div>
-                            <div class="arrow">⇄</div>
-                            <div class="flow-box">
-                                <div>💬 Диалог</div>
-                                <small>двое беседуют</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="style-cards">
-                    <div class="style-card">
-                        <h4> Монолог</h4>
-                        <p><strong>Особенности:</strong> говорит один человек, не рассчитан на ответ</p>
-                        <p><strong>Примеры:</strong> доклад, сказка, лекция, рассказ</p>
-                    </div>
-                    <div class="style-card">
-                        <h4> Диалог</h4>
-                        <p><strong>Особенности:</strong> говорят двое или больше, чередование реплик</p>
-                        <p><strong>Примеры:</strong> разговор, интервью, спор</p>
-                    </div>
-                </div>
-
-                <div class="real-life-example">
-                    <div class="example-title">💡 Пример из жизни</div>
-                    <p><strong>Монолог:</strong> Учитель объясняет новую тему — все слушают, никто не перебивает.</p>
-                    <p><strong>Диалог:</strong> Ты спрашиваешь у друга: «Пойдёшь в кино?» — он отвечает: «Давай! Во сколько?» — это диалог.</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title"> Практика</h3>
-                
-                <div class="practice-task">
-                    <div class="task-title">Задание</div>
-                    <p>Определи форму и вид речи в каждом случае:</p>
-                    <ol>
-                        <li>Сказка, которую рассказывает бабушка (записана в книге)</li>
-                        <li>Интервью с директором школы в газете</li>
-                        <li>Твой разговор с другом по телефону</li>
-                    </ol>
-                    <button class="btn" onclick="toggleAnswer('answer3')">Показать ответ</button>
-                    <div id="answer3" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <ol>
-                            <li><strong>Форма:</strong> письменная (записана в книге), <strong>Вид:</strong> монолог (рассказывает один)</li>
-                            <li><strong>Форма:</strong> устная (запись разговора), <strong>Вид:</strong> диалог (вопрос-ответ)</li>
-                            <li><strong>Форма:</strong> устная, <strong>Вид:</strong> диалог</li>
-                        </ol>
-                        <p><strong>Важно:</strong> форма и вид речи — это разные параметры! Интервью в газете — это устная речь (потому что это беседа), но зафиксированная письменно.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="real-life-example">
+            <div class="example-title">💡 Пример из жизни</div>
+            <p>Представь, что ты объясняешь другу, как пройти к тебе домой:</p>
+            <ul>
+                <li><strong>Устно:</strong> говоришь быстро, показываешь жестами, используешь интонацию: «Поверни <em>налево</em> (поднимаешь руку), потом прямо до красного дома».</li>
+                <li><strong>Письменно:</strong> пишешь в сообщении: «Поверните налево на улице Ленина, затем идите прямо 200 метров до дома №15 (красный кирпичный дом)».</li>
+            </ul>
         </div>
 
-        <!-- Тема 3: Стили речи -->
-        <div class="topic-block">
-            <div class="topic-header">
-                <h2>§3. Стили речи</h2>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title"> Теория</h3>
-                
-                <div class="theory-box">
-                    <p>Каждый стиль используется в <strong>определённой сфере общения</strong> и имеет свои языковые особенности.</p>
-                </div>
-
-                <div class="style-cards">
-                    <div class="style-card">
-                        <h4>🏠 Разговорный</h4>
-                        <p><strong>Где:</strong> бытовое общение</p>
-                        <p><strong>Особенности:</strong> неофициальный, эмоциональный</p>
-                        <p><strong>Примеры:</strong> беседа с другом, письмо товарищу</p>
-                    </div>
-                    <div class="style-card">
-                        <h4>🔬 Научный</h4>
-                        <p><strong>Где:</strong> наука, учёба</p>
-                        <p><strong>Особенности:</strong> термины, точность, логичность</p>
-                        <p><strong>Примеры:</strong> статья в журнале, реферат, доклад</p>
-                    </div>
-                    <div class="style-card">
-                        <h4>📰 Публицистический</h4>
-                        <p><strong>Где:</strong> СМИ, общество</p>
-                        <p><strong>Особенности:</strong> воздействие на читателя, эмоции</p>
-                        <p><strong>Примеры:</strong> статья в газете, выступление</p>
-                    </div>
-                    <div class="style-card">
-                        <h4>📋 Официально-деловой</h4>
-                        <p><strong>Где:</strong> документы, право</p>
-                        <p><strong>Особенности:</strong> формальность, стандарт</p>
-                        <p><strong>Примеры:</strong> объяснительная, протокол, инструкция</p>
-                    </div>
-                    <div class="style-card">
-                        <h4>🎨 Художественный</h4>
-                        <p><strong>Где:</strong> литература</p>
-                        <p><strong>Особенности:</strong> образность, метафоры</p>
-                        <p><strong>Примеры:</strong> роман, стихотворение, сказка</p>
-                    </div>
-                </div>
-
-                <div class="real-life-example">
-                    <div class="example-title"> Пример из жизни</div>
-                    <p><strong>Научный стиль:</strong> «Чёрное море соединяется с Азовским морем Керченским проливом. Наибольшая глубина 2210 м.» (из энциклопедии)</p>
-                    <p><strong>Разговорный стиль:</strong> «Чёрное море — это круто! Там такая глубина, что аж жуть берёт!»</p>
-                    <p><strong>Публицистический:</strong> «Чёрное море — жемчужина России! Оно дарит нам здоровье и радость!»</p>
-                </div>
-
-                <div class="oge-tip">
-                    <div class="oge-tip-title">💡 Подсказка к заданию</div>
-                    <p>В задании на определение стиля текста смотри на:</p>
-                    <ul>
-                        <li>Наличие терминов (научный)</li>
-                        <li>Эмоции и призывы (публицистический)</li>
-                        <li>Образы и метафоры (художественный)</li>
-                        <li>Штампы и стандартные формулировки (деловой)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">📝 Практика</h3>
-                
-                <div class="practice-task">
-                    <div class="task-title">Задание 1</div>
-                    <p>Распредели жанры по стилям:</p>
-                    <p><em>беседа с другом, статья в научном журнале, объяснительная записка, статья в газете, реферат, протокол, выступление на юбилее</em></p>
-                    <button class="btn" onclick="toggleAnswer('answer4')">Показать ответ</button>
-                    <div id="answer4" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <ul>
-                            <li><strong>Разговорный:</strong> беседа с другом</li>
-                            <li><strong>Научный:</strong> статья в научном журнале, реферат</li>
-                            <li><strong>Публицистический:</strong> статья в газете, выступление на юбилее</li>
-                            <li><strong>Деловой:</strong> объяснительная записка, протокол</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="practice-task">
-                    <div class="task-title">Задание 2</div>
-                    <p>Прочитай текст. Определи стиль и докажи свой ответ:</p>
-                    <blockquote>
-                        «Интернет позволяет обеспечить равный доступ к знаниям, к передовым образовательным технологиям — сделать российскую систему образования более эффективной.»
-                    </blockquote>
-                    <button class="btn" onclick="toggleAnswer('answer5')">Показать ответ</button>
-                    <div id="answer5" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <p><strong>Стиль:</strong> публицистический</p>
-                        <p><strong>Доказательства:</strong></p>
-                        <ul>
-                            <li>Общественно-политическая тема (образование)</li>
-                            <li>Воздействие на читателя (призыв к размышлению)</li>
-                            <li>Оценочная лексика («передовым», «более эффективной»)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Тема 4: Грамматическая основа -->
-        <div class="topic-block">
-            <div class="topic-header">
-                <h2>§4. Простое предложение и грамматическая основа</h2>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">🎯 Теория</h3>
-                
-                <div class="theory-box">
-                    <p><strong>Грамматическая основа</strong> = подлежащее + сказуемое</p>
-                    <ul>
-                        <li><strong>Подлежащее</strong> (о ком/чём?) — подчёркиваем одной чертой</li>
-                        <li><strong>Сказуемое</strong> (что делает?) — подчёркиваем двумя чертами</li>
-                    </ul>
-                </div>
-
-                <div class="grammar-scheme">
-                    <div class="diagram-title">📌 Правило ТИРЕ</div>
-                    <p><strong>Тире ставится</strong>, если:</p>
-                    <ol>
-                        <li>Оба главных члена — существительные в И.п.: <span class="highlight">Язык — язык</span></li>
-                        <li>Есть слово <span class="highlight">ЭТО, ЗНАЧИТ, ВОТ</span>: <span class="highlight">Мир — это шелест</span></li>
-                        <li>Оба — числительные: <span class="highlight">Пятью пять — двадцать пять</span></li>
-                    </ol>
-                    <p><strong>Тире НЕ ставится</strong>, если есть частица НЕ или союз КАК</p>
-                </div>
-
-                <div class="real-life-example">
-                    <div class="example-title">💡 Пример из жизни</div>
-                    <p>Представь, что ты описываешь свой телефон:</p>
-                    <ul>
-                        <li><strong>С тире:</strong> «Телефон — это моё окно в мир» (оба существительные)</li>
-                        <li><strong>Без тире:</strong> «Телефон не игрушка» (есть частица НЕ)</li>
-                        <li><strong>Без тире:</strong> «Телефон как продолжение руки» (есть союз КАК)</li>
-                    </ul>
-                </div>
-
-                <div class="oge-tip">
-                    <div class="oge-tip-title">💡 Подсказка к заданию</div>
-                    <p>В задании на пунктуацию тире между подлежащим и сказуемым — одна из самых частых ошибок. Сначала найди грамматическую основу, потом проверь, нужно ли тире.</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">📝 Практика</h3>
-                
-                <div class="practice-task">
-                    <div class="task-title">Задание 1</div>
-                    <p>Расставь тире там, где нужно:</p>
-                    <ol>
-                        <li>Мир это шелест листов</li>
-                        <li>Язык Пришвина язык народный</li>
-                        <li>Пятью пять двадцать пять</li>
-                    </ol>
-                    <button class="btn" onclick="toggleAnswer('answer6')">Показать ответ</button>
-                    <div id="answer6" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <ol>
-                            <li>Мир <strong>—</strong> это шелест листов (есть слово ЭТО)</li>
-                            <li>Язык Пришвина <strong>—</strong> язык народный (оба существительные)</li>
-                            <li>Пятью пять <strong>—</strong> двадцать пять (оба числительные)</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <div class="practice-task">
-                    <div class="task-title">Задание 2</div>
-                    <p>Найди грамматическую основу в предложении:</p>
-                    <blockquote>
-                        «Слова у Пришвина цветут, сверкают.»
-                    </blockquote>
-                    <button class="btn" onclick="toggleAnswer('answer7')">Показать ответ</button>
-                    <div id="answer7" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <p><strong>Подлежащее:</strong> слова</p>
-                        <p><strong>Сказуемое:</strong> цветут, сверкают (однородные)</p>
-                        <p><strong>Схема:</strong> <span class="highlight">слова</span> (подлежащее) <span class="highlight">цветут, сверкают</span> (сказуемые)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Тема 5: Обособленные члены -->
-        <div class="topic-block">
-            <div class="topic-header">
-                <h2>§5. Обособленные члены предложения</h2>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">🎯 Теория</h3>
-                
-                <div class="theory-box">
-                    <p><strong>Обособление</strong> — это выделение запятыми второстепенных членов для смыслового акцента.</p>
-                </div>
-
-                <div class="visual-diagram">
-                    <div class="diagram-title">📌 Правила обособления</div>
-                    <div style="text-align: left; margin-top: 15px;">
-                        <p><strong>1. Причастный оборот</strong> (какой? что делающий?):</p>
-                        <ul>
-                            <li>✅ Обособляется, если стоит <strong>ПОСЛЕ</strong> определяемого слова</li>
-                            <li>❌ НЕ обособляется, если стоит <strong>ПЕРЕД</strong></li>
-                        </ul>
-                        <p><em>Пример:</em> «Книга, <strong>лежащая на столе</strong>, интересная.» (после → запятые)</p>
-                        
-                        <p style="margin-top: 15px;"><strong>2. Деепричастный оборот</strong> (что делая? что сделав?):</p>
-                        <ul>
-                            <li>✅ Обособляется <strong>ВСЕГДА</strong>, где бы ни стоял!</li>
-                        </ul>
-                        <p><em>Пример:</em> «<strong>Читая книгу</strong>, я заснул.» / «Я заснул, <strong>читая книгу</strong>.»</p>
-                    </div>
-                </div>
-
-                <div class="real-life-example">
-                    <div class="example-title">💡 Пример из жизни</div>
-                    <p>Представь, что описываешь друга:</p>
-                    <ul>
-                        <li><strong>Причастный оборот:</strong> «Мой друг, <em>играющий в футбол</em>, победил.» (после слова «друг» → запятые)</li>
-                        <li><strong>Деепричастный оборот:</strong> «<em>Играя в футбол</em>, он забил гол.» (всегда обособляется)</li>
-                    </ul>
-                </div>
-
-                <div class="oge-tip">
-                    <div class="oge-tip-title"> Подсказка к заданию</div>
-                    <p>Алгоритм расстановки запятых:</p>
-                    <ol>
-                        <li>Найди грамматическую основу</li>
-                        <li>Ищи причастные/деепричастные обороты</li>
-                        <li>Проверь позицию причастного (после слова → запятые)</li>
-                        <li>Деепричастный → всегда запятые!</li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">📝 Практика</h3>
-                
-                <div class="practice-task">
-                    <div class="task-title">Задание 1</div>
-                    <p>Расставь запятые. Объясни, почему:</p>
-                    <blockquote>
-                        «Офицеры приезжавшие из армии рассказывали подробности.»
-                    </blockquote>
-                    <button class="btn" onclick="toggleAnswer('answer8')">Показать ответ</button>
-                    <div id="answer8" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <p>«Офицеры, <strong>приезжавшие из армии</strong>, рассказывали подробности.»</p>
-                        <p><strong>Почему:</strong> причастный оборот «приезжавшие из армии» стоит ПОСЛЕ слова «офицеры» → обособляется с двух сторон.</p>
-                    </div>
-                </div>
-
-                <div class="practice-task">
-                    <div class="task-title">Задание 2</div>
-                    <p>Расставь запятые:</p>
-                    <blockquote>
-                        «Приподнявшись в седле он нащупал верёвку.»
-                    </blockquote>
-                    <button class="btn" onclick="toggleAnswer('answer9')">Показать ответ</button>
-                    <div id="answer9" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <p>«<strong>Приподнявшись в седле</strong>, он нащупал верёвку.»</p>
-                        <p><strong>Почему:</strong> «приподнявшись в седле» — деепричастный оборот → всегда обособляется!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Тема 6: Обращения и вводные слова -->
-        <div class="topic-block">
-            <div class="topic-header">
-                <h2>§6. Обращения, вводные слова и вставные конструкции</h2>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">🎯 Теория</h3>
-                
-                <div class="theory-box">
-                    <p><strong>Обращение</strong> — слово, называющее того, к кому обращаются. Не является членом предложения!</p>
-                </div>
-
-                <div class="visual-diagram">
-                    <div class="diagram-title">📌 Пунктуация при обращениях</div>
-                    <div style="text-align: left; margin-top: 15px;">
-                        <ul>
-                            <li>«<strong>Друзья</strong>, приходите!» (в начале → запятая после)</li>
-                            <li>«Приходите, <strong>друзья</strong>!» (в конце → запятая перед)</li>
-                            <li>«Ты, <strong>Петров</strong>, реши задачу.» (в середине → с двух сторон)</li>
-                            <li>«<strong>Маша!</strong> Иди сюда!» (эмоциональное → восклицательный знак)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="theory-box" style="margin-top: 20px;">
-                    <p><strong>Вводные слова</strong> выражают отношение говорящего. <strong>Всегда обособляются!</strong></p>
-                    <ul>
-                        <li><strong>Уверенность:</strong> конечно, безусловно</li>
-                        <li><strong>Неуверенность:</strong> может быть, вероятно</li>
-                        <li><strong>Порядок:</strong> во-первых, наконец</li>
-                        <li><strong>Источник:</strong> по мнению, как известно</li>
-                    </ul>
-                </div>
-
-                <div class="real-life-example">
-                    <div class="example-title"> Пример из жизни</div>
-                    <p>Ты пишешь сообщение другу:</p>
-                    <ul>
-                        <li>«<strong>Слушай</strong>, давай встретимся?» (обращение)</li>
-                        <li>«<strong>Конечно</strong>, я приду!» (вводное слово — уверенность)</li>
-                        <li>«<strong>К сожалению</strong>, не смогу.» (вводное — эмоция)</li>
-                    </ul>
-                </div>
-
-                <div class="oge-tip">
-                    <div class="oge-tip-title">💡 Подсказка к заданию</div>
-                    <p>Вводные слова можно <strong>убрать</strong> из предложения без потери смысла. Если можно — это вводное, ставь запятые!</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">📝 Практика</h3>
-                
-                <div class="practice-task">
-                    <div class="task-title">Задание 1</div>
-                    <p>Расставь запятые. Найди обращения и вводные слова:</p>
-                    <blockquote>
-                        «Ребята давайте сделаем это задание.»
-                    </blockquote>
-                    <button class="btn" onclick="toggleAnswer('answer10')">Показать ответ</button>
-                    <div id="answer10" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <p>«<strong>Ребята</strong>, давайте сделаем это задание.»</p>
-                        <p><strong>Обращение:</strong> «Ребята» (в начале → запятая после)</p>
-                    </div>
-                </div>
-
-                <div class="practice-task">
-                    <div class="task-title">Задание 2</div>
-                    <p>Расставь запятые:</p>
-                    <blockquote>
-                        «Этот текст конечно написан в научном стиле.»
-                    </blockquote>
-                    <button class="btn" onclick="toggleAnswer('answer11')">Показать ответ</button>
-                    <div id="answer11" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <p>«Этот текст, <strong>конечно</strong>, написан в научном стиле.»</p>
-                        <p><strong>Вводное слово:</strong> «конечно» (выражает уверенность) → выделяется с двух сторон</p>
-                        <p><strong>Проверка:</strong> убери слово — смысл не изменился: «Этот текст написан в научном стиле.»</p>
-                    </div>
-                </div>
-
-                <div class="practice-task">
-                    <div class="task-title">Задание 3</div>
-                    <p>Найди вводные и вставные конструкции:</p>
-                    <blockquote>
-                        «Роман Пушкина — явление уникальное. Его (только лишь ему свойственные) поэтические краски совершенно неповторимы.»
-                    </blockquote>
-                    <button class="btn" onclick="toggleAnswer('answer12')">Показать ответ</button>
-                    <div id="answer12" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <p><strong>Вставная конструкция:</strong> «(только лишь ему свойственные)» — выделена скобками, даёт дополнительное пояснение</p>
-                        <p><strong>Запомни:</strong> вставные конструкции выделяются скобками или тире, вводные — запятыми.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Итоговый блок -->
-        <div class="topic-block final-block">
-            <h2>🎓 Итоговый чек-лист</h2>
-            <div class="checklist-grid">
-                <div class="checklist-col">
-                    <h3>✅ Я знаю:</h3>
-                    <ul>
-                        <li>Чем устная речь отличается от письменной</li>
-                        <li>Что такое монолог и диалог</li>
-                        <li>5 стилей речи и их признаки</li>
-                        <li>Как найти грамматическую основу</li>
-                        <li>Когда ставится тире</li>
-                    </ul>
-                </div>
-                <div class="checklist-col">
-                    <h3>✅ Я умею:</h3>
-                    <ul>
-                        <li>Обособлять причастные обороты</li>
-                        <li>Обособлять деепричастные обороты</li>
-                        <li>Находить обращения</li>
-                        <li>Расставлять запятые при вводных словах</li>
-                        <li>Определять стиль текста</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="final-message">
-                <h3>Готов к работе?</h3>
-                <p>Повтори правила, прорешай задания из учебника и будь уверен в себе!</p>
-                <p style="font-size: 1.1em; margin-top: 10px; color: #4a6fa5;"><strong>У тебя всё получится!</strong> 💪</p>
-            </div>
+        <div class="oge-tip">
+            <div class="oge-tip-title">⚠️ Ловушка: слова-паразиты</div>
+            <p>«Значит», «как бы», «вот», «дело в том, что» не несут смысла, отвлекают слушателя и выдают неуверенность. В устной части экзамена и в любом публичном выступлении они работают против тебя — заменяй их паузой.</p>
         </div>
     </div>
 
-    <script>
-        function toggleAnswer(id) {
-            const answerBox = document.getElementById(id);
-            if (answerBox.style.display === 'block') {
-                answerBox.style.display = 'none';
-            } else {
-                answerBox.style.display = 'block';
-                answerBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-        }
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Урок загружен. Удачи!');
-        });
-    </script>
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Найди лишнее</div>
+            <p>Прочитай фрагмент устного ответа ученика. Найди лишние слова и выражения («слова-паразиты»). Как они мешают восприятию?</p>
+            <blockquote>«Значит... самое важное отличие Эллады от Египта... как бы в особой роли городов. Дело в том, что в Египте город был столицей... В Элладе... значит... каждый город... или, как говорили греки, полис, был независимой республикой... вот с народным собранием...»</blockquote>
+            <button class="btn" onclick="toggleAnswer('t1')">Показать ответ</button>
+            <div id="t1" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p><strong>Лишние слова:</strong> «значит», «как бы», «дело в том, что», «вот», «именно».</p>
+                <p><strong>Почему мешают:</strong></p>
+                <ul>
+                    <li>отвлекают внимание от содержания;</li>
+                    <li>создают впечатление неуверенности;</li>
+                    <li>замедляют речь;</li>
+                    <li>показывают, что говорящий не подготовился.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Устное сообщение</div>
+            <p>Подготовь устное сообщение (на 1 минуту) на тему «Чем устная речь отличается от письменной». Используй примеры из своей жизни.</p>
+            <button class="btn" onclick="toggleAnswer('t2')">Показать план ответа</button>
+            <div id="t2" class="answer-box">
+                <div class="answer-title">📋 План ответа</div>
+                <ol>
+                    <li>Начни с определения: «Речь бывает устной и письменной...»</li>
+                    <li>Назови 2–3 главных отличия (средства выразительности, время на подготовку).</li>
+                    <li>Приведи пример: «Например, когда я звоню другу...»</li>
+                    <li>Сделай вывод: «Обе формы важны для общения».</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- §2 -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§2. Монолог и диалог</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория</h3>
+        <div class="theory-box">
+            <p>Виды речи выделяются <strong>по смене говорящего и слушающего</strong>:</p>
+            <div class="visual-diagram">
+                <div class="diagram-title">Виды речи</div>
+                <div class="speech-flow">
+                    <div class="flow-box"><div>🎤 Монолог</div><small>один говорит</small></div>
+                    <div class="arrow">⇄</div>
+                    <div class="flow-box"><div>💬 Диалог</div><small>двое беседуют</small></div>
+                </div>
+            </div>
+        </div>
+        <div class="conj-grid">
+            <div class="conj-card">
+                <h4>🎤 Монолог</h4>
+                <p><strong>Особенности:</strong> говорит один человек, не рассчитан на ответ.</p>
+                <p><strong>Примеры:</strong> доклад, сказка, лекция, рассказ.</p>
+            </div>
+            <div class="conj-card">
+                <h4>💬 Диалог</h4>
+                <p><strong>Особенности:</strong> говорят двое или больше, чередование реплик.</p>
+                <p><strong>Примеры:</strong> разговор, интервью, спор.</p>
+            </div>
+        </div>
+        <div class="real-life-example">
+            <div class="example-title">💡 Пример из жизни</div>
+            <p><strong>Монолог:</strong> учитель объясняет новую тему — все слушают, никто не перебивает.</p>
+            <p><strong>Диалог:</strong> ты спрашиваешь у друга: «Пойдёшь в кино?» — он отвечает: «Давай! Во сколько?»</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+        <div class="practice-task">
+            <div class="task-title">Задание. Форма и вид речи</div>
+            <p>Определи форму и вид речи в каждом случае:</p>
+            <ol>
+                <li>Сказка, которую рассказывает бабушка (записана в книге).</li>
+                <li>Интервью с директором школы в газете.</li>
+                <li>Твой разговор с другом по телефону.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('t3')">Показать ответ</button>
+            <div id="t3" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li><strong>Форма:</strong> письменная (записана в книге); <strong>вид:</strong> монолог (рассказывает один).</li>
+                    <li><strong>Форма:</strong> устная (запись разговора); <strong>вид:</strong> диалог (вопрос — ответ).</li>
+                    <li><strong>Форма:</strong> устная; <strong>вид:</strong> диалог.</li>
+                </ol>
+                <p><strong>Важно:</strong> форма и вид речи — разные параметры! Интервью в газете — устная речь (это беседа), но зафиксированная письменно.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- §3 -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§3. Стили речи</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория</h3>
+        <div class="theory-box">
+            <p>Каждый стиль используется в <strong>определённой сфере общения</strong> и имеет свои языковые особенности.</p>
+        </div>
+        <div class="conj-grid">
+            <div class="conj-card"><h4>🏠 Разговорный</h4><p><strong>Где:</strong> бытовое общение.</p><p><strong>Особенности:</strong> неофициальный, эмоциональный.</p><p><strong>Примеры:</strong> беседа с другом, письмо товарищу.</p></div>
+            <div class="conj-card"><h4>🔬 Научный</h4><p><strong>Где:</strong> наука, учёба.</p><p><strong>Особенности:</strong> термины, точность, логичность.</p><p><strong>Примеры:</strong> статья в журнале, реферат, доклад.</p></div>
+            <div class="conj-card"><h4>📰 Публицистический</h4><p><strong>Где:</strong> СМИ, общество.</p><p><strong>Особенности:</strong> воздействие на читателя, эмоции.</p><p><strong>Примеры:</strong> статья в газете, выступление.</p></div>
+            <div class="conj-card"><h4>📋 Официально-деловой</h4><p><strong>Где:</strong> документы, право.</p><p><strong>Особенности:</strong> формальность, стандарт.</p><p><strong>Примеры:</strong> объяснительная, протокол, инструкция.</p></div>
+            <div class="conj-card"><h4>🎨 Художественный</h4><p><strong>Где:</strong> литература.</p><p><strong>Особенности:</strong> образность, метафоры.</p><p><strong>Примеры:</strong> роман, стихотворение, сказка.</p></div>
+        </div>
+        <div class="real-life-example">
+            <div class="example-title">💡 Пример из жизни</div>
+            <p><strong>Научный:</strong> «Чёрное море соединяется с Азовским морем Керченским проливом. Наибольшая глубина 2210 м.»</p>
+            <p><strong>Разговорный:</strong> «Чёрное море — это круто! Там такая глубина, что аж жуть берёт!»</p>
+            <p><strong>Публицистический:</strong> «Чёрное море — жемчужина России! Оно дарит нам здоровье и радость!»</p>
+        </div>
+        <div class="oge-tip">
+            <div class="oge-tip-title">💡 Подсказка к заданию</div>
+            <p>Определяя стиль текста, смотри на: наличие терминов (научный); эмоции и призывы (публицистический); образы и метафоры (художественный); штампы и стандартные формулировки (деловой).</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Жанры по стилям</div>
+            <p>Распредели жанры по стилям: <em>беседа с другом, статья в научном журнале, объяснительная записка, статья в газете, реферат, протокол, выступление на юбилее</em>.</p>
+            <button class="btn" onclick="toggleAnswer('t4')">Показать ответ</button>
+            <div id="t4" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ul>
+                    <li><strong>Разговорный:</strong> беседа с другом.</li>
+                    <li><strong>Научный:</strong> статья в научном журнале, реферат.</li>
+                    <li><strong>Публицистический:</strong> статья в газете, выступление на юбилее.</li>
+                    <li><strong>Деловой:</strong> объяснительная записка, протокол.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Определи стиль</div>
+            <p>Прочитай текст. Определи стиль и докажи свой ответ.</p>
+            <blockquote>«Интернет позволяет обеспечить равный доступ к знаниям, к передовым образовательным технологиям — сделать российскую систему образования более эффективной.»</blockquote>
+            <button class="btn" onclick="toggleAnswer('t5')">Показать ответ</button>
+            <div id="t5" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p><strong>Стиль:</strong> публицистический.</p>
+                <p><strong>Доказательства:</strong></p>
+                <ul>
+                    <li>общественно значимая тема (образование);</li>
+                    <li>воздействие на читателя (призыв к размышлению);</li>
+                    <li>оценочная лексика («передовым», «более эффективной»).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- §4 -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§4. Простое предложение и его грамматическая основа</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория</h3>
+        <div class="theory-box">
+            <p><strong>Грамматическая основа</strong> = подлежащее + сказуемое.</p>
+            <ul>
+                <li><strong>Подлежащее</strong> (о ком/чём?) — подчёркиваем одной чертой;</li>
+                <li><strong>Сказуемое</strong> (что делает?) — подчёркиваем двумя чертами.</li>
+            </ul>
+        </div>
+        <div class="theory-box">
+            <p>📌 <strong>Правило тире между главными членами</strong></p>
+            <p><span class="highlight">Тире ставится, если оба главных члена — существительные в И.п. (Язык — язык), оба — числительные (Пятью пять — двадцать пять) или есть слова ЭТО, ЗНАЧИТ, ВОТ (Мир — это шелест).</span></p>
+            <p><span class="highlight">Тире НЕ ставится, если перед сказуемым есть частица НЕ (Телефон не игрушка) или союзы КАК, БУДТО, СЛОВНО (Телефон как продолжение руки).</span></p>
+        </div>
+        <div class="real-life-example">
+            <div class="example-title">💡 Пример из жизни</div>
+            <p>Описываешь свой телефон:</p>
+            <ul>
+                <li>с тире: «Телефон — это моё окно в мир» (оба существительные);</li>
+                <li>без тире: «Телефон не игрушка» (частица НЕ);</li>
+                <li>без тире: «Телефон как продолжение руки» (союз КАК).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Расставь тире</div>
+            <ol>
+                <li>Мир это шелест листов</li>
+                <li>Язык Пришвина язык народный</li>
+                <li>Пятью пять двадцать пять</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('t6')">Показать ответ</button>
+            <div id="t6" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>Мир <strong>—</strong> это шелест листов (есть слово ЭТО).</li>
+                    <li>Язык Пришвина <strong>—</strong> язык народный (оба существительные в И.п.).</li>
+                    <li>Пятью пять <strong>—</strong> двадцать пять (оба числительные).</li>
+                </ol>
+            </div>
+        </div>
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Найди основу</div>
+            <p>Найди грамматическую основу в предложении:</p>
+            <blockquote>«Слова у Пришвина цветут, сверкают.»</blockquote>
+            <button class="btn" onclick="toggleAnswer('t7')">Показать ответ</button>
+            <div id="t7" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p><strong>Подлежащее:</strong> слова. <strong>Сказуемое:</strong> цветут, сверкают (однородные).</p>
+                <div class="scheme-box">слова ‖ цветут, сверкают</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- §5 -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§5. Предложения с обособленными членами</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория</h3>
+        <div class="theory-box">
+            <p><strong>Обособление</strong> — это выделение запятыми второстепенных членов для смыслового акцента.</p>
+            <p>📌 <strong>Причастный оборот</strong> (какой? что делающий?): <span class="highlight">обособляется, если стоит ПОСЛЕ определяемого слова; НЕ обособляется, если стоит ПЕРЕД ним</span>. Пример: «Книга, лежащая на столе, интересная» / «Лежащая на столе книга интересна».</p>
+            <p>📌 <strong>Деепричастный оборот</strong> (что делая? что сделав?): <span class="highlight">обособляется ВСЕГДА, где бы ни стоял</span>. Пример: «Читая книгу, я заснул» / «Я заснул, читая книгу».</p>
+        </div>
+        <div class="real-life-example">
+            <div class="example-title">💡 Пример из жизни</div>
+            <p>Описываешь друга:</p>
+            <ul>
+                <li>причастный оборот: «Мой друг, играющий в футбол, победил.» (после слова «друг» → запятые);</li>
+                <li>деепричастный оборот: «Играя в футбол, он забил гол.» (всегда обособляется).</li>
+            </ul>
+        </div>
+        <div class="oge-tip">
+            <div class="oge-tip-title">💡 Алгоритм расстановки запятых</div>
+            <ol>
+                <li>Найди грамматическую основу.</li>
+                <li>Ищи причастные и деепричастные обороты.</li>
+                <li>Проверь позицию причастного: после слова → запятые.</li>
+                <li>Деепричастный → запятые всегда!</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Причастный оборот</div>
+            <p>Расставь запятые. Объясни, почему:</p>
+            <blockquote>«Офицеры приезжавшие из армии рассказывали подробности.»</blockquote>
+            <button class="btn" onclick="toggleAnswer('t8')">Показать ответ</button>
+            <div id="t8" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p>«Офицеры, приезжавшие из армии, рассказывали подробности.»</p>
+                <p><strong>Почему:</strong> причастный оборот «приезжавшие из армии» стоит ПОСЛЕ определяемого слова «офицеры» → обособляется с двух сторон.</p>
+            </div>
+        </div>
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Деепричастный оборот</div>
+            <p>Расставь запятые:</p>
+            <blockquote>«Приподнявшись в седле он нащупал верёвку.»</blockquote>
+            <button class="btn" onclick="toggleAnswer('t9')">Показать ответ</button>
+            <div id="t9" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p>«Приподнявшись в седле, он нащупал верёвку.»</p>
+                <p><strong>Почему:</strong> «приподнявшись в седле» — деепричастный оборот → обособляется всегда.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- §6 -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§6. Обращения, вводные слова и вставные конструкции</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория</h3>
+        <div class="theory-box">
+            <p><strong>Обращение</strong> — слово, называющее того, к кому обращаются. Не является членом предложения!</p>
+            <p><span class="highlight">Обращение выделяется запятыми: в начале — после него, в конце — перед ним, в середине — с двух сторон. Эмоциональное обращение в начале — с восклицательным знаком: «Маша! Иди сюда!»</span></p>
+        </div>
+        <div class="theory-box">
+            <p><strong>Вводные слова</strong> выражают отношение говорящего и <span class="highlight">всегда обособляются запятыми</span>: уверенность (конечно, безусловно); неуверенность (может быть, вероятно); порядок (во-первых, наконец); источник (по мнению, как известно).</p>
+            <p><strong>Вставные конструкции</strong> дают дополнительное пояснение и выделяются <span class="highlight">скобками или тире</span>, а вводные — только запятыми.</p>
+        </div>
+        <div class="real-life-example">
+            <div class="example-title">💡 Пример из жизни</div>
+            <p>Ты пишешь сообщение другу:</p>
+            <ul>
+                <li>«Слушай, давай встретимся?» (обращение);</li>
+                <li>«Конечно, я приду!» (вводное слово — уверенность);</li>
+                <li>«К сожалению, не смогу.» (вводное — эмоция).</li>
+            </ul>
+        </div>
+        <div class="oge-tip">
+            <div class="oge-tip-title">💡 Подсказка к заданию</div>
+            <p>Вводное слово можно убрать из предложения без потери смысла. Если можно — это вводное, ставь запятые!</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Обращение</div>
+            <p>Расставь запятые. Найди обращения и вводные слова:</p>
+            <blockquote>«Ребята давайте сделаем это задание.»</blockquote>
+            <button class="btn" onclick="toggleAnswer('t10')">Показать ответ</button>
+            <div id="t10" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p>«Ребята, давайте сделаем это задание.»</p>
+                <p><strong>Обращение:</strong> «Ребята» (стоит в начале → запятая после него).</p>
+            </div>
+        </div>
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Вводное слово</div>
+            <p>Расставь запятые:</p>
+            <blockquote>«Этот текст конечно написан в научном стиле.»</blockquote>
+            <button class="btn" onclick="toggleAnswer('t11')">Показать ответ</button>
+            <div id="t11" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p>«Этот текст, конечно, написан в научном стиле.»</p>
+                <p><strong>Вводное слово:</strong> «конечно» (выражает уверенность) → выделяется с двух сторон.</p>
+                <p><strong>Проверка:</strong> убери слово — смысл не изменился: «Этот текст написан в научном стиле.»</p>
+            </div>
+        </div>
+        <div class="practice-task">
+            <div class="task-title">Задание 3 (сложнее). Вставная конструкция</div>
+            <p>Найди вводные и вставные конструкции:</p>
+            <blockquote>«Роман Пушкина — явление уникальное. Его (только лишь ему свойственные) поэтические краски совершенно неповторимы.»</blockquote>
+            <button class="btn" onclick="toggleAnswer('t12')">Показать ответ</button>
+            <div id="t12" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p><strong>Вставная конструкция:</strong> «(только лишь ему свойственные)» — выделена скобками, даёт дополнительное пояснение.</p>
+                <p><strong>Запомни:</strong> вставные конструкции выделяются скобками или тире, вводные — запятыми.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Итоговая практика ОГЭ -->
+<div class="topic-block">
+    <div class="topic-header"><h2>Итоговая практика в формате ОГЭ</h2></div>
+
+    <div class="section">
+        <div class="practice-task">
+            <div class="task-title">Задание 1. Формат задания 3 ОГЭ (характеристика предложений)</div>
+            <p>Прочитай текст. Укажи номера верных утверждений.</p>
+            <blockquote>
+                (1) Ветер подул, и листья зашумели.<br>
+                (2) Книга, лежащая на столе, оказалась интересной.<br>
+                (3) Мы, конечно, успеем закончить работу вовремя.<br>
+                (4) Утро было ясное и морозное.
+            </blockquote>
+            <ol>
+                <li>Предложение 1 — сложносочинённое.</li>
+                <li>Предложение 2 — простое с обособленным определением (причастным оборотом).</li>
+                <li>Предложение 3 — простое с вводным словом.</li>
+                <li>Предложение 4 — сложное.</li>
+                <li>Предложение 2 — сложноподчинённое.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('t13')">Показать ответ</button>
+            <div id="t13" class="answer-box">
+                <div class="answer-title">✅ Ответ: 123</div>
+                <ul>
+                    <li>1 — верно: две основы (ветер подул; листья зашумели), союз <em>и</em> → ССП;</li>
+                    <li>2 — верно: одна основа (книга оказалась интересной), причастный оборот «лежащая на столе» стоит после определяемого слова → обособленное определение;</li>
+                    <li>3 — верно: вводное слово «конечно» выделено запятыми;</li>
+                    <li>4 — неверно: одна основа (утро было ясное и морозное), однородные сказуемые при одиночном <em>и</em> → простое предложение;</li>
+                    <li>5 — неверно: в предложении 2 одна основа, придаточного нет.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Формат задания 5 ОГЭ (цифры на месте запятых)</div>
+            <p>Укажи цифры, на месте которых должны стоять запятые:</p>
+            <blockquote>Дорога(1) ведущая к деревне(2) была засыпана опавшими листьями(3) шуршащими(4) под ногами.</blockquote>
+            <button class="btn" onclick="toggleAnswer('t14')">Показать ответ</button>
+            <div id="t14" class="answer-box">
+                <div class="answer-title">✅ Ответ: 123</div>
+                <ul>
+                    <li>запятая 1 — начало причастного оборота «ведущая к деревне» (стоит после определяемого слова «дорога»);</li>
+                    <li>запятая 2 — конец этого оборота;</li>
+                    <li>запятая 3 — начало причастного оборота «шуршащими под ногами» (стоит после определяемого слова «листьями»);</li>
+                    <li>цифра 4 — внутри второго оборота, запятая не нужна.</li>
+                </ul>
+                <p>Запись: «Дорога, ведущая к деревне, была засыпана опавшими листьями, шуршащими под ногами.»</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Чек-лист -->
+<div class="topic-block final-block">
+    <h2>🎓 Итоговый чек-лист</h2>
+    <div class="checklist-grid">
+        <div class="checklist-col">
+            <h3>✅ Я знаю:</h3>
+            <ul>
+                <li>чем устная речь отличается от письменной</li>
+                <li>что такое монолог и диалог</li>
+                <li>5 стилей речи и их признаки</li>
+                <li>как найти грамматическую основу</li>
+                <li>когда ставится тире между главными членами</li>
+            </ul>
+        </div>
+        <div class="checklist-col">
+            <h3>✅ Я умею:</h3>
+            <ul>
+                <li>обособлять причастные обороты</li>
+                <li>обособлять деепричастные обороты</li>
+                <li>находить обращения и вводные слова</li>
+                <li>расставлять запятые при вводных словах</li>
+                <li>определять стиль текста</li>
+            </ul>
+        </div>
+    </div>
+    <div class="final-message">
+        <h3>Готов к работе?</h3>
+        <p>Повтори правила, прорешай задания из учебника и будь уверен в себе!</p>
+        <p style="font-size:1.1em; margin-top:10px; color:#4a6fa5;"><strong>У тебя всё получится!</strong> 💪</p>
+    </div>
+</div>
+
+</div>
+<script>
+function toggleAnswer(id) {
+    const box = document.getElementById(id);
+    if (box.style.display === 'block') { box.style.display = 'none'; }
+    else { box.style.display = 'block'; box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+}
+</script>
 </body>
 </html>

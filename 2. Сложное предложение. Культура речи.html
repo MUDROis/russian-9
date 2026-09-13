@@ -1,629 +1,419 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Интерактивный урок по русскому языку для 9 класса. Сложное предложение: понятие, виды, пунктуация и интонация.">
-    <title>Сложное предложение | Русский язык 9 класс</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.7;
-            color: #2c3e50;
-            background: #f5f7fa;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-
-        header {
-            background: #ffffff;
-            padding: 35px 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-            margin-bottom: 30px;
-            text-align: center;
-            border-top: 4px solid #4a6fa5;
-        }
-
-        h1 {
-            color: #2c3e50;
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .subtitle {
-            color: #5a6c7d;
-            font-size: 1.15em;
-            font-style: italic;
-        }
-
-        .topic-block {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 35px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-        }
-
-        .topic-header {
-            background: #4a6fa5;
-            color: #ffffff;
-            padding: 18px 25px;
-            border-radius: 8px;
-            margin: -35px -35px 30px -35px;
-        }
-
-        h2 {
-            font-size: 1.6em;
-            font-weight: 600;
-        }
-
-        .section {
-            margin-bottom: 35px;
-        }
-
-        .section-title {
-            color: #4a6fa5;
-            font-size: 1.3em;
-            margin-bottom: 18px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #e0e6ed;
-            font-weight: 600;
-        }
-
-        .theory-box {
-            background: #f8f9fb;
-            border-left: 4px solid #4a6fa5;
-            padding: 20px 25px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
-
-        .visual-diagram {
-            background: #f8f9fb;
-            border: 1px solid #e0e6ed;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .diagram-title {
-            font-weight: 600;
-            color: #4a6fa5;
-            margin-bottom: 15px;
-            font-size: 1.05em;
-        }
-
-        .speech-flow {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .flow-box {
-            background: #ffffff;
-            color: #2c3e50;
-            padding: 20px 25px;
-            border-radius: 8px;
-            min-width: 160px;
-            text-align: center;
-            border: 2px solid #4a6fa5;
-            box-shadow: 0 2px 8px rgba(74,111,165,0.08);
-        }
-
-        .flow-box > div {
-            font-weight: 600;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .flow-box small {
-            color: #5a6c7d;
-        }
-
-        .arrow {
-            font-size: 1.8em;
-            color: #4a6fa5;
-            font-weight: bold;
-        }
-
-        .real-life-example {
-            background: #f0f7f0;
-            border-left: 4px solid #6a9a6a;
-            padding: 20px 25px;
-            border-radius: 6px;
-            margin: 20px 0;
-        }
-
-        .example-title {
-            color: #4a7a4a;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .practice-task {
-            background: #fffaf0;
-            border: 1px solid #f0dcb8;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 25px 0;
-        }
-
-        .task-title {
-            color: #8b6f3a;
-            font-weight: 600;
-            font-size: 1.15em;
-            margin-bottom: 15px;
-        }
-
-        .btn {
-            background: #4a6fa5;
-            color: #ffffff;
-            border: none;
-            padding: 11px 26px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.95em;
-            font-weight: 600;
-            margin: 10px 5px 10px 0;
-            transition: background 0.2s;
-            font-family: inherit;
-        }
-
-        .btn:hover {
-            background: #3a5a8a;
-        }
-
-        .answer-box {
-            display: none;
-            background: #f0f5fa;
-            border: 1px solid #c8d8e8;
-            border-radius: 8px;
-            padding: 20px 25px;
-            margin-top: 15px;
-        }
-
-        .answer-title {
-            color: #4a6fa5;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .oge-tip {
-            background: #f8f4f0;
-            border-left: 4px solid #b8865a;
-            padding: 18px 22px;
-            border-radius: 6px;
-            margin: 20px 0;
-        }
-
-        .oge-tip-title {
-            color: #8b6f3a;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        blockquote {
-            background: #ffffff;
-            padding: 15px 20px;
-            border-radius: 6px;
-            margin: 10px 0;
-            border-left: 3px solid #c8d8e8;
-            font-style: italic;
-        }
-
-        ul, ol {
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        strong {
-            color: #4a6fa5;
-            font-weight: 600;
-        }
-
-        .final-block {
-            background: #ffffff;
-            border-top: 4px solid #4a6fa5;
-        }
-
-        .final-block h2 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .checklist-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 25px;
-        }
-
-        .checklist-col h3 {
-            color: #4a6fa5;
-            margin-bottom: 15px;
-            font-size: 1.15em;
-        }
-
-        .checklist-col ul {
-            list-style: none;
-            margin-left: 0;
-        }
-
-        .checklist-col li {
-            padding: 6px 0;
-            border-bottom: 1px dashed #e0e6ed;
-        }
-
-        .checklist-col li:before {
-            content: "☐ ";
-            color: #4a6fa5;
-            font-weight: bold;
-        }
-
-        .final-message {
-            text-align: center;
-            padding: 25px;
-            background: #f8f9fb;
-            border-radius: 8px;
-            border: 1px solid #e0e6ed;
-        }
-
-        .final-message h3 {
-            color: #4a6fa5;
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            background: #fff3c4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 1.7em; }
-            h2 { font-size: 1.3em; }
-            .topic-block { padding: 20px; }
-            .topic-header { margin: -20px -20px 25px -20px; padding: 15px 20px; }
-            .speech-flow { flex-direction: column; }
-            .arrow { transform: rotate(90deg); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Урок русского языка, 9 класс: сложное предложение — понятие, виды, пунктуация и интонация (§7-10). Теория, практика, ответы по кнопке, формат ОГЭ.">
+<title>Сложное предложение | Русский язык 9 класс</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.7; color: #2c3e50; background: #f5f7fa; min-height: 100vh; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 30px 20px; }
+    header { background: #fff; padding: 35px 30px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.06); margin-bottom: 30px; text-align: center; border-top: 4px solid #4a6fa5; }
+    h1 { color: #2c3e50; font-size: 2.2em; margin-bottom: 10px; font-weight: 600; }
+    .subtitle { color: #5a6c7d; font-size: 1.15em; font-style: italic; }
+    .topic-block { background: #fff; border-radius: 12px; padding: 35px; margin-bottom: 25px; box-shadow: 0 2px 12px rgba(0,0,0,.05); }
+    .topic-header { background: #4a6fa5; color: #fff; padding: 18px 25px; border-radius: 8px; margin: -35px -35px 30px -35px; }
+    h2 { font-size: 1.6em; font-weight: 600; }
+    .section { margin-bottom: 35px; }
+    .section-title { color: #4a6fa5; font-size: 1.3em; margin-bottom: 18px; padding-bottom: 8px; border-bottom: 2px solid #e0e6ed; font-weight: 600; }
+    .theory-box { background: #f8f9fb; border-left: 4px solid #4a6fa5; padding: 20px 25px; border-radius: 6px; margin-bottom: 20px; }
+    .visual-diagram { background: #f8f9fb; border: 1px solid #e0e6ed; border-radius: 8px; padding: 25px; margin: 20px 0; text-align: center; }
+    .diagram-title { font-weight: 600; color: #4a6fa5; margin-bottom: 15px; font-size: 1.05em; }
+    .speech-flow { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .flow-box { background: #fff; color: #2c3e50; padding: 20px 25px; border-radius: 8px; min-width: 160px; text-align: center; border: 2px solid #4a6fa5; box-shadow: 0 2px 8px rgba(74,111,165,.08); }
+    .flow-box > div { font-weight: 600; font-size: 1.1em; margin-bottom: 5px; }
+    .flow-box small { color: #5a6c7d; }
+    .arrow { font-size: 1.6em; color: #4a6fa5; font-weight: bold; }
+    .real-life-example { background: #f0f7f0; border-left: 4px solid #6a9a6a; padding: 20px 25px; border-radius: 6px; margin: 20px 0; }
+    .example-title { color: #4a7a4a; font-weight: 600; margin-bottom: 10px; }
+    .practice-task { background: #fffaf0; border: 1px solid #f0dcb8; border-radius: 8px; padding: 25px; margin: 25px 0; }
+    .task-title { color: #8b6f3a; font-weight: 600; font-size: 1.15em; margin-bottom: 15px; }
+    .btn { background: #4a6fa5; color: #fff; border: none; padding: 11px 26px; border-radius: 6px; cursor: pointer; font-size: .95em; font-weight: 600; margin: 10px 5px 10px 0; transition: background .2s; font-family: inherit; }
+    .btn:hover { background: #3a5a8a; }
+    .answer-box { display: none; background: #f0f5fa; border: 1px solid #c8d8e8; border-radius: 8px; padding: 20px 25px; margin-top: 15px; }
+    .answer-title { color: #4a6fa5; font-weight: 600; margin-bottom: 10px; }
+    .oge-tip { background: #f8f4f0; border-left: 4px solid #b8865a; padding: 18px 22px; border-radius: 6px; margin: 20px 0; }
+    .oge-tip-title { color: #8b6f3a; font-weight: 600; margin-bottom: 8px; }
+    blockquote { background: #fff; padding: 15px 20px; border-radius: 6px; margin: 10px 0; border-left: 3px solid #c8d8e8; font-style: italic; }
+    ul, ol { margin-left: 25px; margin-bottom: 15px; }
+    li { margin-bottom: 8px; }
+    strong { color: #4a6fa5; font-weight: 600; }
+    .highlight { background: #fff3c4; padding: 2px 6px; border-radius: 3px; font-weight: 600; }
+    .scheme-box { background: #f8f9fb; border: 2px solid #4a6fa5; border-radius: 8px; padding: 15px; margin: 15px 0; font-family: 'Courier New', monospace; text-align: center; font-weight: bold; }
+    .final-block { background: #fff; border-top: 4px solid #4a6fa5; }
+    .final-block h2 { color: #2c3e50; text-align: center; margin-bottom: 25px; }
+    .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 25px; }
+    .checklist-col h3 { color: #4a6fa5; margin-bottom: 15px; font-size: 1.15em; }
+    .checklist-col ul { list-style: none; margin-left: 0; }
+    .checklist-col li { padding: 6px 0; border-bottom: 1px dashed #e0e6ed; }
+    .checklist-col li:before { content: "☐ "; color: #4a6fa5; font-weight: bold; }
+    .final-message { text-align: center; padding: 25px; background: #f8f9fb; border-radius: 8px; border: 1px solid #e0e6ed; }
+    .final-message h3 { color: #4a6fa5; margin-bottom: 10px; }
+    @media (max-width: 768px) {
+        h1 { font-size: 1.7em; } h2 { font-size: 1.3em; }
+        .topic-block { padding: 20px; }
+        .topic-header { margin: -20px -20px 25px -20px; padding: 15px 20px; }
+        .speech-flow { flex-direction: column; }
+        .arrow { transform: rotate(90deg); }
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Сложное предложение</h1>
-            <p class="subtitle">Понятие, виды, пунктуация и интонация (§7–§10)</p>
-        </header>
+<div class="container">
 
-        <!-- Тема 1: Понятие о сложном предложении -->
-        <div class="topic-block">
-            <div class="topic-header">
-                <h2>§7. Понятие о сложном предложении</h2>
-            </div>
+<header>
+    <h1>Сложное предложение</h1>
+    <p class="subtitle">Понятие, виды, пунктуация и интонация (§7–10)</p>
+</header>
 
-            <div class="section">
-                <h3 class="section-title">🎯 Теория</h3>
-                
-                <div class="theory-box">
-                    <p><strong>Сложное предложение</strong> — это предложение, состоящее из двух или нескольких простых предложений (предикативных частей), которые объединены в одно смысловое, грамматическое и интонационное целое.</p>
-                    <ul>
-                        <li>Имеет <strong>две или более</strong> грамматических основ.</li>
-                        <li>Части сложного предложения не имеют интонации конца, она есть только у всего предложения в целом.</li>
-                    </ul>
-                </div>
+<!-- §7 -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§7. Понятие о сложном предложении</h2></div>
 
-                <div class="visual-diagram">
-                    <div class="diagram-title">Схема сложного предложения</div>
-                    <div class="speech-flow">
-                        <div class="flow-box">
-                            <div>[ ... ]</div>
-                            <small>1-я грамматическая основа</small>
-                        </div>
-                        <div class="arrow">,</div>
-                        <div class="flow-box">
-                            <div>[ ... ]</div>
-                            <small>2-я грамматическая основа</small>
-                        </div>
-                    </div>
-                </div>
+    <div class="section">
+        <h3 class="section-title">🎯 Теория</h3>
+        <div class="theory-box">
+            <p><strong>Сложное предложение</strong> — это предложение, состоящее из двух или нескольких простых предложений (предикативных частей), которые образуют смысловое, грамматическое и интонационное единство.</p>
+            <p><span class="highlight">В сложном предложении две или более грамматические основы. Интонация конца присуща всему сложному предложению в целом, а не его частям.</span></p>
+            <p>Каждая часть внутри сложного читается с интонацией <em>незавершённости</em> — поэтому мы чувствуем, что предложение ещё не закончилось.</p>
+        </div>
 
-                <div class="real-life-example">
-                    <div class="example-title">💡 Пример из жизни</div>
-                    <p><strong>Простое:</strong> «Наступила осень.» (Одна основа: наступила осень). Мы сделали паузу и понизили голос.</p>
-                    <p><strong>Сложное:</strong> «Наступила осень, и птицы улетели на юг.» (Две основы: наступила осень; птицы улетели). Голос повышается перед «и» и понижается только в самом конце.</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">📝 Практика</h3>
-                
-                <div class="practice-task">
-                    <div class="task-title">Задание 1</div>
-                    <p>Определи, какое предложение сложное. Подчеркни грамматические основы.</p>
-                    <blockquote>
-                        1. Даже маленькие маргаритки, выросшие на газонах, отбрасывали миниатюрные тени.<br>
-                        2. Дверь неслышно распахнулась, и в комнату вошёл человек.
-                    </blockquote>
-                    <button class="btn" onclick="toggleAnswer('answer1')">Показать ответ</button>
-                    <div id="answer1" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <p>Сложное предложение — <strong>второе</strong>.</p>
-                        <p><strong>Основы:</strong> 1) дверь распахнулась; 2) человек вошёл.</p>
-                        <p>В первом предложении одна основа: «маргаритки отбрасывали тени». «Выросшие на газонах» — это причастный оборот, а не вторая основа.</p>
-                    </div>
-                </div>
+        <div class="visual-diagram">
+            <div class="diagram-title">Схема сложного предложения</div>
+            <div class="speech-flow">
+                <div class="flow-box"><div>[ … ]</div><small>1-я основа, интонация незавершённости ↗</small></div>
+                <div class="arrow">,</div>
+                <div class="flow-box"><div>[ … ]</div><small>2-я основа, конец ↘</small></div>
             </div>
         </div>
 
-        <!-- Тема 2: Виды сложных предложений -->
-        <div class="topic-block">
-            <div class="topic-header">
-                <h2>§8. Союзные и бессоюзные сложные предложения</h2>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">🎯 Теория</h3>
-                
-                <div class="theory-box">
-                    <p>По способу связи частей сложные предложения делятся на две большие группы:</p>
-                </div>
-
-                <div class="visual-diagram">
-                    <div class="diagram-title">Классификация сложных предложений</div>
-                    <div class="speech-flow" style="flex-direction: column; gap: 15px;">
-                        <div class="flow-box" style="width: 100%; border-color: #b8865a;">
-                            <div>Сложные предложения</div>
-                        </div>
-                        <div class="speech-flow">
-                            <div class="flow-box">
-                                <div>Союзные</div>
-                                <small>(с помощью союзов)</small>
-                            </div>
-                            <div class="flow-box">
-                                <div>Бессоюзные (БСП)</div>
-                                <small>(только интонация)</small>
-                            </div>
-                        </div>
-                        <div class="speech-flow">
-                            <div class="flow-box" style="border-color: #6a9a6a;">
-                                <div>Сложносочинённые (ССП)</div>
-                                <small>сочинительные союзы (и, а, но)</small>
-                            </div>
-                            <div class="flow-box" style="border-color: #6a9a6a;">
-                                <div>Сложноподчинённые (СПП)</div>
-                                <small>подчинительные союзы (что, когда, который)</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="oge-tip">
-                    <div class="oge-tip-title">💡 Подсказка к заданию</div>
-                    <p>Чтобы определить вид сложного предложения, задай вопросы:</p>
-                    <ol>
-                        <li>Есть ли союзы между частями? Если нет → БСП.</li>
-                        <li>Если есть, равноправны ли части? (Можно ли поменять их местами без потери смысла?) Если да → ССП.</li>
-                        <li>Если одна часть зависит от другой (можно задать вопрос) → СПП.</li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">📝 Практика</h3>
-                
-                <div class="practice-task">
-                    <div class="task-title">Задание 1</div>
-                    <p>Определи вид каждого сложного предложения (ССП, СПП или БСП).</p>
-                    <ol>
-                        <li>Небо посветлело, побледнели звёзды.</li>
-                        <li>Заря уже занималась в небе, когда оба приятеля возвращались домой.</li>
-                        <li>Все знают: слоны в диковинку у нас.</li>
-                    </ol>
-                    <button class="btn" onclick="toggleAnswer('answer2')">Показать ответ</button>
-                    <div id="answer2" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <ol>
-                            <li><strong>БСП</strong> (бессоюзное). Связь только интонационная (перечисление).</li>
-                            <li><strong>СПП</strong> (сложноподчинённое). Есть подчинительный союз «когда», от главной части можно задать вопрос.</li>
-                            <li><strong>БСП</strong> (бессоюзное). Вторая часть раскрывает содержание первой (можно подставить союз «что»).</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Тема 3: Знаки препинания -->
-        <div class="topic-block">
-            <div class="topic-header">
-                <h2>§9. Разделительные и выделительные знаки препинания</h2>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">🎯 Теория</h3>
-                
-                <div class="theory-box">
-                    <p>Знаки препинания в сложном предложении выполняют две разные функции:</p>
-                    <ul>
-                        <li><strong>Разделительная:</strong> разделяет равноправные части. Используется в ССП и БСП. Знаки: запятая, точка с запятой, двоеточие, тире.</li>
-                        <li><strong>Выделительная:</strong> выделяет зависимую часть. Используется в СПП. Основной знак: запятая (отделяет придаточное от главного).</li>
-                    </ul>
-                </div>
-
-                <div class="real-life-example">
-                    <div class="example-title">💡 Пример из жизни</div>
-                    <p><strong>Разделение (ССП):</strong> «Солнце село <span class="highlight">,</span> и стало темно.» (Запятая разделяет две равноправные части).</p>
-                    <p><strong>Выделение (СПП):</strong> «Стало темно <span class="highlight">,</span> когда село солнце.» (Запятая выделяет придаточное время «когда село солнце»).</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">📝 Практика</h3>
-                
-                <div class="practice-task">
-                    <div class="task-title">Задание 1</div>
-                    <p>Расставь пропущенные знаки препинания и объясни их постановку (разделительная или выделительная функция).</p>
-                    <blockquote>
-                        1. Лучи солнца ярко обливали золотом верхушки сосен потом гасли одни за другими последний луч оставался долго.<br>
-                        2. Мы не стали дожидаться когда казаки заседлают лошадей и пошли вперёд.
-                    </blockquote>
-                    <button class="btn" onclick="toggleAnswer('answer3')">Показать ответ</button>
-                    <div id="answer3" class="answer-box">
-                        <div class="answer-title">✅ Ответ</div>
-                        <p>1. «Лучи солнца ярко обливали золотом верхушки сосен <strong>,</strong> потом гасли одни за другими <strong>;</strong> последний луч оставался долго.»</p>
-                        <ul>
-                            <li>Первая запятая: <strong>разделительная</strong> (между частями ССП с союзом «потом» в значении «и потом»).</li>
-                            <li>Точка с запятой: <strong>разделительная</strong> (в БСП, части распространённые и уже содержат запятые внутри себя или слабо связаны).</li>
-                        </ul>
-                        <p>2. «Мы не стали дожидаться <strong>,</strong> когда казаки заседлают лошадей <strong>,</strong> и пошли вперёд.»</p>
-                        <ul>
-                            <li>Обе запятые: <strong>выделительная</strong> функция (выделяют придаточное время «когда казаки заседлают лошадей» с двух сторон).</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Тема 4: Интонация сложного предложения -->
-        <div class="topic-block">
-            <div class="topic-header">
-                <h2>§10. Интонация сложного предложения</h2>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">🎯 Теория</h3>
-                
-                <div class="theory-box">
-                    <p>Интонация сложного предложения имеет <strong>три основных элемента</strong>:</p>
-                    <ol>
-                        <li><strong>Повышение голоса</strong> перед паузой между частями.</li>
-                        <li><strong>Пауза</strong> (фиксируется знаками препинания).</li>
-                        <li><strong>Постепенное понижение голоса</strong> только к самому концу всего сложного предложения (интонация завершённости).</li>
-                    </ol>
-                    <p>Каждая часть внутри сложного предложения произносится с интонацией <em>незавершённости</em>.</p>
-                </div>
-
-                <div class="visual-diagram">
-                    <div class="diagram-title">Интонационная схема</div>
-                    <p style="font-size: 1.2em; margin: 15px 0;">
-                        [ Часть 1 ] <span style="color: #b8865a; font-weight: bold;">↗ (повышение)</span> <span style="color: #4a6fa5; font-weight: bold;">| (пауза)</span> [ Часть 2 ] <span style="color: #6a9a6a; font-weight: bold;">↘ (понижение, конец)</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title">📝 Практика</h3>
-                
-                <div class="practice-task">
-                    <div class="task-title">Задание 1</div>
-                    <p>Прочитай предложение вслух, соблюдая интонацию. Где голос повысится, а где понизится?</p>
-                    <blockquote>
-                        Ещё слышалось где-то топанье, что-то похожее на рокот отдалённого моря, и скоро всё стало пусто и глухо.
-                    </blockquote>
-                    <button class="btn" onclick="toggleAnswer('answer4')">Показать интонационную схему</button>
-                    <div id="answer4" class="answer-box">
-                        <div class="answer-title">✅ Интонационная схема</div>
-                        <p>«Ещё слышалось где-то топанье <span style="color: #b8865a; font-weight: bold;">↗</span> <span style="color: #4a6fa5; font-weight: bold;">|</span> что-то похожее на рокот отдалённого моря <span style="color: #b8865a; font-weight: bold;">↗</span> <span style="color: #4a6fa5; font-weight: bold;">|</span> и скоро всё стало пусто и глухо <span style="color: #6a9a6a; font-weight: bold;">↘</span>.»</p>
-                        <p><strong>Пояснение:</strong> Голос повышается перед каждой запятой (интонация перечисления/незавершённости), а окончательное понижение происходит только после слова «глухо».</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Производство (Production) -->
-        <div class="topic-block">
-            <div class="topic-header">
-                <h2>🚀 Творческая практика</h2>
-            </div>
-            <div class="section">
-                <div class="practice-task">
-                    <div class="task-title">Задание: «Осенний пейзаж»</div>
-                    <p>Напиши короткий текст (4–5 предложений) о природе в твоём городе. <strong>Условие:</strong> ты должен использовать минимум по одному предложению каждого типа:</p>
-                    <ul>
-                        <li>Одно сложносочинённое (ССП)</li>
-                        <li>Одно сложноподчинённое (СПП)</li>
-                        <li>Одно бессоюзное (БСП)</li>
-                    </ul>
-                    <p><em>Подчеркни грамматические основы и расставь все знаки препинания.</em></p>
-                    <button class="btn" onclick="toggleAnswer('answer5')">Показать образец</button>
-                    <div id="answer5" class="answer-box">
-                        <div class="answer-title">✅ Образец выполнения</div>
-                        <p>1. Наступила золотая осень <strong>,</strong> и лес преобразился до неузнаваемости. <em>(ССП, разделительная запятая)</em></p>
-                        <p>2. Деревья <strong>,</strong> <em>которые ещё вчера были зелёными</em> <strong>,</strong> теперь стоят в ярко-жёлтом уборе. <em>(СПП, выделительные запятые)</em></p>
-                        <p>3. Птицы улетают на юг <strong>:</strong> они чувствуют приближение холодов. <em>(БСП, разделительное двоеточие, причина)</em></p>
-                        <p>4. Как же прекрасно это время года <strong>!</strong></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Итоговый блок -->
-        <div class="topic-block final-block">
-            <h2>🎓 Итоговый чек-лист</h2>
-            <div class="checklist-grid">
-                <div class="checklist-col">
-                    <h3>✅ Я знаю:</h3>
-                    <ul>
-                        <li>Отличие сложного предложения от простого</li>
-                        <li>Три вида сложных предложений (ССП, СПП, БСП)</li>
-                        <li>Разницу между разделительной и выделительной функцией знаков</li>
-                        <li>Три элемента интонации сложного предложения</li>
-                    </ul>
-                </div>
-                <div class="checklist-col">
-                    <h3>✅ Я умею:</h3>
-                    <ul>
-                        <li>Находить все грамматические основы в тексте</li>
-                        <li>Определять вид сложного предложения по средствам связи</li>
-                        <li>Объяснять постановку запятой, двоеточия или тире</li>
-                        <li>Читать сложное предложение с правильной интонацией</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="final-message">
-                <h3>Отличная работа!</h3>
-                <p>Тема «Сложное предложение» — одна из самых важных. Повтори схемы и попробуй найти примеры таких предложений в любой книге.</p>
-                <p style="font-size: 1.1em; margin-top: 10px; color: #4a6fa5;"><strong>У тебя всё получится!</strong> 💪</p>
-            </div>
+        <div class="real-life-example">
+            <div class="example-title">💡 Пример из жизни</div>
+            <p><strong>Простое:</strong> «Наступила осень.» Одна основа (<em>наступила осень</em>), голос понизился в конце.</p>
+            <p><strong>Сложное:</strong> «Наступила осень, и птицы улетели на юг.» Две основы (<em>наступила осень</em>; <em>птицы улетели</em>): голос повышается перед «и» и понижается только в самом конце.</p>
         </div>
     </div>
 
-    <script>
-        function toggleAnswer(id) {
-            const answerBox = document.getElementById(id);
-            if (answerBox.style.display === 'block') {
-                answerBox.style.display = 'none';
-            } else {
-                answerBox.style.display = 'block';
-                answerBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-        }
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Урок загружен. Удачи!');
-        });
-    </script>
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Найди сложное предложение</div>
+            <p>Определи, какое предложение сложное. Подчеркни грамматические основы.</p>
+            <blockquote>
+                1. Даже маленькие маргаритки, выросшие на газонах, отбрасывали миниатюрные тени.<br>
+                2. Дверь неслышно распахнулась, и в комнату вошёл человек.
+            </blockquote>
+            <button class="btn" onclick="toggleAnswer('t1')">Показать ответ</button>
+            <div id="t1" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p>Сложное — <strong>второе</strong>.</p>
+                <p>Основы: 1) <em>дверь распахнулась</em>; 2) <em>человек вошёл</em>.</p>
+                <p>В первом предложении одна основа: <em>маргаритки отбрасывали тени</em>. «Выросшие на газонах» — причастный оборот, а не вторая основа.</p>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Собери сложное и начерти схему</div>
+            <p>Соедини простые предложения в одно сложное (без союза) и начерти схему. С какой интонацией читаются части?</p>
+            <blockquote>Сбежали ручьи. Зацвели ландыши. В зарослях кустов вспыхнули пурпуровые цветы медуницы.</blockquote>
+            <button class="btn" onclick="toggleAnswer('t2')">Показать ответ</button>
+            <div id="t2" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p>«Сбежали ручьи, зацвели ландыши, в зарослях кустов вспыхнули пурпуровые цветы медуницы.»</p>
+                <div class="scheme-box">[ … ], [ … ], [ … ].</div>
+                <p>Первая и вторая части читаются с интонацией незавершённости (голос повышается перед паузой), интонация конца — только у последней части.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- §8 -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§8. Союзные и бессоюзные сложные предложения</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория</h3>
+        <div class="theory-box">
+            <p><span class="highlight">По средству связи сложные предложения делятся на союзные (сложносочинённые и сложноподчинённые) и бессоюзные (связь только интонацией).</span></p>
+        </div>
+
+        <div class="visual-diagram">
+            <div class="diagram-title">Классификация сложных предложений</div>
+            <div class="speech-flow" style="flex-direction: column; gap: 15px;">
+                <div class="flow-box" style="width: 100%; border-color: #b8865a;"><div>Сложные предложения</div></div>
+                <div class="speech-flow">
+                    <div class="flow-box"><div>Союзные</div><small>с помощью союзов</small></div>
+                    <div class="flow-box"><div>Бессоюзные (БСП)</div><small>только интонация</small></div>
+                </div>
+                <div class="speech-flow">
+                    <div class="flow-box" style="border-color: #6a9a6a;"><div>Сложносочинённые (ССП)</div><small>сочинительные союзы: и, а, но</small></div>
+                    <div class="flow-box" style="border-color: #6a9a6a;"><div>Сложноподчинённые (СПП)</div><small>подчинительные союзы и союзные слова: что, когда, который</small></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="oge-tip">
+            <div class="oge-tip-title">💡 Подсказка к заданию</div>
+            <ol>
+                <li>Есть ли союзы между частями? Нет → БСП.</li>
+                <li>Части равноправны (можно поменять местами без потери смысла)? Да → ССП.</li>
+                <li>Одна часть зависит от другой (задаётся вопрос) → СПП.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Определи вид</div>
+            <p>Определи вид каждого сложного предложения (ССП, СПП или БСП).</p>
+            <blockquote>
+                1. Небо посветлело, побледнели звёзды.<br>
+                2. Заря уже занималась в небе, когда оба приятеля возвращались домой.<br>
+                3. Все знают: слоны в диковинку у нас.
+            </blockquote>
+            <button class="btn" onclick="toggleAnswer('t3')">Показать ответ</button>
+            <div id="t3" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li><strong>БСП</strong> — связь только интонационная (перечисление событий).</li>
+                    <li><strong>СПП</strong> — подчинительный союз «когда», от главной части задаётся вопрос (занималась <em>когда?</em>).</li>
+                    <li><strong>БСП</strong> — вторая часть раскрывает содержание первой (можно подставить союз «что»).</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2 (сложнее). Найди средство связи</div>
+            <p>Назови средство связи частей в каждом предложении.</p>
+            <blockquote>
+                1. Известно, что слоны в диковинку у нас.<br>
+                2. Взошёл молодой месяц, и всё кругом потонуло в фантастическом свете.<br>
+                3. В столовой на снежной свежей скатерти стоял большой букет ландышей, вся комната была наполнена их запахом.
+            </blockquote>
+            <button class="btn" onclick="toggleAnswer('t4')">Показать ответ</button>
+            <div id="t4" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <ol>
+                    <li>Союз <strong>что</strong> + интонация → СПП.</li>
+                    <li>Сочинительный союз <strong>и</strong> + интонация → ССП.</li>
+                    <li>Только <strong>интонация</strong> → БСП.</li>
+                </ol>
+                <p>Средства связи не только объединяют части, но и выражают смысловые отношения между ними.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- §9 -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§9. Разделительные и выделительные знаки препинания</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория</h3>
+        <div class="theory-box">
+            <p>Знаки препинания в сложном предложении выполняют две функции:</p>
+            <ul>
+                <li><span class="highlight">Разделительная — в ССП и БСП знаки (запятая, точка с запятой, двоеточие, тире) разделяют равноправные или независимые части.</span></li>
+                <li><span class="highlight">Выделительная — в СПП запятая выделяет зависимую часть (придаточное предложение).</span></li>
+            </ul>
+            <p><strong>Авторская пунктуация:</strong> в художественном тексте автор может ставить знаки, не предусмотренные правилами (чаще тире или точку с запятой), чтобы передать добавочный смысл. Например, К. Паустовский ставит тире там, где по правилу нужно двоеточие: «Ловить в коряжистых местах было очень заманчиво — там пряталась крупная и ленивая рыба».</p>
+        </div>
+
+        <div class="real-life-example">
+            <div class="example-title">💡 Пример из жизни</div>
+            <p><strong>Разделение (ССП):</strong> «Солнце село, и стало темно.» Запятая разделяет две равноправные части.</p>
+            <p><strong>Выделение (СПП):</strong> «Стало темно, когда село солнце.» Запятая выделяет придаточное времени.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 1 (базовое). Расставь знаки и объясни</div>
+            <p>Расставь пропущенные знаки препинания. Объясни функцию каждого знака.</p>
+            <blockquote>
+                1. Лучи солнца ярко обливали золотом верхушки сосен потом гасли одни за другими последний луч оставался долго.<br>
+                2. Мы не стали дожидаться когда казаки заседлают лошадей и пошли вперёд.
+            </blockquote>
+            <button class="btn" onclick="toggleAnswer('t5')">Показать ответ</button>
+            <div id="t5" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p>1. «Лучи солнца ярко обливали золотом верхушки сосен<strong>,</strong> потом гасли одни за другими<strong>;</strong> последний луч оставался долго.»</p>
+                <ul>
+                    <li>Запятая — между <strong>однородными сказуемыми</strong> (<em>обливали, гасли</em>) внутри первого простого предложения: связь бессоюзная, слово «потом» — не союз.</li>
+                    <li>Точка с запятой — <strong>разделительная</strong> между частями БСП: части распространённые и уже содержат запятую внутри.</li>
+                </ul>
+                <p>2. «Мы не стали дожидаться<strong>,</strong> когда казаки заседлают лошадей<strong>,</strong> и пошли вперёд.»</p>
+                <ul>
+                    <li>Обе запятые — <strong>выделительная</strong> функция: выделяют придаточное «когда казаки заседлают лошадей», стоящее внутри главного.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Раздели или выдели</div>
+            <p>Сгруппируй предложения: а) с разделительными знаками; б) с выделительными знаками.</p>
+            <blockquote>
+                1. Дед оказался прав: к вечеру пришла гроза.<br>
+                2. Солнце жгло по-вчерашнему, воздух был недвижен и уныл.<br>
+                3. Шорохом и звоном наполнится утром лес, а пока над посёлком плыло тёмное небо с яркими иглистыми звёздами.<br>
+                4. Брат, когда передал письмо, не стал ждать ответа.
+            </blockquote>
+            <button class="btn" onclick="toggleAnswer('t6')">Показать ответ</button>
+            <div id="t6" class="answer-box">
+                <div class="answer-title">✅ Ответ</div>
+                <p><strong>а) Разделительные:</strong> 1 (двоеточие в БСП), 2 (запятая в БСП), 3 (запятая в ССП с союзом «а»).</p>
+                <p><strong>б) Выделительные:</strong> 4 (запятые выделяют придаточное «когда передал письмо» в СПП).</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- §10 -->
+<div class="topic-block">
+    <div class="topic-header"><h2>§10. Интонация сложного предложения</h2></div>
+
+    <div class="section">
+        <h3 class="section-title">🎯 Теория</h3>
+        <div class="theory-box">
+            <p><span class="highlight">Интонация сложного предложения имеет три элемента: повышение голоса → пауза → постепенное понижение голоса к концу всего предложения.</span></p>
+            <p>Входя в состав сложного, простое предложение утрачивает интонацию завершённости: интонация конца реализуется <strong>один раз</strong> — на конце всего сложного. Именно это помогает услышать, где сложное предложение заканчивается.</p>
+            <p>Интонация вместе с союзами или без них соединяет части в единое целое, поэтому она сама является средством связи.</p>
+        </div>
+
+        <div class="visual-diagram">
+            <div class="diagram-title">Интонационная схема</div>
+            <div class="scheme-box">[ Часть 1 ] ↗ &nbsp;|&nbsp; [ Часть 2 ] ↗ &nbsp;|&nbsp; [ Часть 3 ] ↘</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">📝 Практика</h3>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 1. Прочитай по интонационной схеме</div>
+            <p>Прочитай вслух, соблюдая повышение, паузы и понижение тона. Где голос повысится, а где понизится?</p>
+            <blockquote>Ещё слышалось где-то топанье, что-то похожее на рокот отдалённого моря, и скоро всё стало пусто и глухо.</blockquote>
+            <button class="btn" onclick="toggleAnswer('t7')">Показать интонационную схему</button>
+            <div id="t7" class="answer-box">
+                <div class="answer-title">✅ Интонационная схема</div>
+                <p>«Ещё слышалось где-то топанье <strong>↗ |</strong> что-то похожее на рокот отдалённого моря <strong>↗ |</strong> и скоро всё стало пусто и глухо <strong>↘</strong>.»</p>
+                <p>Голос повышается перед каждой запятой (интонация незавершённости), окончательное понижение — только после слова «глухо».</p>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2 (творческое). Осенний пейзаж</div>
+            <p>Напиши короткий текст (4–5 предложений) о природе в твоём городе. Условие: используй минимум по одному предложению каждого типа: ССП, СПП, БСП. Подчеркни грамматические основы и расставь все знаки.</p>
+            <button class="btn" onclick="toggleAnswer('t8')">Показать образец</button>
+            <div id="t8" class="answer-box">
+                <div class="answer-title">✅ Образец выполнения</div>
+                <ol>
+                    <li>Наступила золотая осень, и лес преобразился до неузнаваемости. (ССП, разделительная запятая)</li>
+                    <li>Деревья, которые ещё вчера были зелёными, теперь стоят в ярко-жёлтом уборе. (СПП, выделительные запятые)</li>
+                    <li>Птицы улетают на юг: они чувствуют приближение холодов. (БСП, разделительное двоеточие, причина)</li>
+                    <li>Как же прекрасно это время года!</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Итоговая практика ОГЭ -->
+<div class="topic-block">
+    <div class="topic-header"><h2>Итоговая практика в формате ОГЭ</h2></div>
+
+    <div class="section">
+        <div class="practice-task">
+            <div class="task-title">Задание 1. Формат задания 3 ОГЭ (характеристика предложений)</div>
+            <p>Прочитай текст. Укажи номера верных утверждений.</p>
+            <blockquote>
+                (1) Наступила ночь, и в доме зажглись огни.<br>
+                (2) Когда наступила ночь, в доме зажглись огни.<br>
+                (3) В доме зажглись огни: наступила ночь.<br>
+                (4) Огни зажглись и замигали в окнах.
+            </blockquote>
+            <ol>
+                <li>Предложение 1 — сложносочинённое.</li>
+                <li>Предложение 2 — сложноподчинённое с придаточным времени, придаточное стоит перед главным.</li>
+                <li>Предложение 3 — бессоюзное, двоеточие ставится, потому что вторая часть указывает причину.</li>
+                <li>Предложение 4 — сложное.</li>
+                <li>Предложение 1 — бессоюзное.</li>
+            </ol>
+            <button class="btn" onclick="toggleAnswer('t9')">Показать ответ</button>
+            <div id="t9" class="answer-box">
+                <div class="answer-title">✅ Ответ: 123</div>
+                <ul>
+                    <li>1 — верно: две основы (ночь наступила; огни зажглись), союз <em>и</em> → ССП;</li>
+                    <li>2 — верно: придаточное «когда наступила ночь» стоит перед главным;</li>
+                    <li>3 — верно: огни зажглись <em>почему?</em> — наступила ночь (причина во второй части) → двоеточие;</li>
+                    <li>4 — неверно: одна основа (<em>огни зажглись и замигали</em>), простое предложение с однородными сказуемыми при одиночном <em>и</em>;</li>
+                    <li>5 — неверно: в предложении 1 есть союз <em>и</em>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="practice-task">
+            <div class="task-title">Задание 2. Формат задания 5 ОГЭ (цифры на месте запятых)</div>
+            <p>Укажи цифры, на месте которых должны стоять запятые:</p>
+            <blockquote>Известно(1) что язык(2) на котором мы думаем(3) определяет наше восприятие мира(4) и обогащает нашу речь.</blockquote>
+            <button class="btn" onclick="toggleAnswer('t10')">Показать ответ</button>
+            <div id="t10" class="answer-box">
+                <div class="answer-title">✅ Ответ: 123</div>
+                <ul>
+                    <li>запятая 1 — перед придаточным изъяснительным (союз <em>что</em>);</li>
+                    <li>запятые 2 и 3 — выделяют придаточное определительное «на котором мы думаем», стоящее после определяемого слова «язык»;</li>
+                    <li>цифра 4 — запятая не нужна: однородные сказуемые внутри придаточного (<em>определяет и обогащает</em>) соединены одиночным <em>и</em>.</li>
+                </ul>
+                <p>Запись: «Известно, что язык, на котором мы думаем, определяет наше восприятие мира и обогащает нашу речь.»</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Чек-лист -->
+<div class="topic-block final-block">
+    <h2>🎓 Итоговый чек-лист</h2>
+    <div class="checklist-grid">
+        <div class="checklist-col">
+            <h3>✅ Я знаю:</h3>
+            <ul>
+                <li>отличие сложного предложения от простого</li>
+                <li>три вида сложных предложений (ССП, СПП, БСП)</li>
+                <li>разницу между разделительной и выделительной функцией знаков</li>
+                <li>три элемента интонации сложного предложения</li>
+            </ul>
+        </div>
+        <div class="checklist-col">
+            <h3>✅ Я умею:</h3>
+            <ul>
+                <li>находить все грамматические основы в тексте</li>
+                <li>определять вид сложного предложения по средствам связи</li>
+                <li>объяснять постановку запятой, двоеточия и точки с запятой</li>
+                <li>читать сложное предложение с правильной интонацией</li>
+                <li>выполнять задания 3 и 5 ОГЭ на эту тему</li>
+            </ul>
+        </div>
+    </div>
+    <div class="final-message">
+        <h3>Отличная работа!</h3>
+        <p>Тема «Сложное предложение» — фундамент всего синтаксиса 9 класса. Повтори схемы и найди собственные примеры в любой книге.</p>
+        <p style="font-size:1.1em; margin-top:10px; color:#4a6fa5;"><strong>У тебя всё получится!</strong> 💪</p>
+    </div>
+</div>
+
+</div>
+<script>
+function toggleAnswer(id) {
+    const box = document.getElementById(id);
+    if (box.style.display === 'block') { box.style.display = 'none'; }
+    else { box.style.display = 'block'; box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+}
+</script>
 </body>
 </html>
