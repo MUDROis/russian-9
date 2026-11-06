@@ -65,6 +65,7 @@
 <header>
     <h1>Сложное предложение</h1>
     <p class="subtitle">Понятие, виды, пунктуация и интонация (§7–10)</p>
+    <p style="margin-top:10px;"><a href="index.html" style="color:#4a6fa5; font-weight:600;">← Карта курса</a></p>
 </header>
 
 <!-- §7 -->
@@ -409,11 +410,21 @@
 
 </div>
 <script>
-function toggleAnswer(id) {
-    const box = document.getElementById(id);
-    if (box.style.display === 'block') { box.style.display = 'none'; }
-    else { box.style.display = 'block'; box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
-}
+document.querySelectorAll('.btn').forEach(function (btn) {
+    var m = (btn.getAttribute('onclick') || '').match(/toggleAnswer\('([^']+)'\)/);
+    if (!m) return;
+    var id = m[1];
+    btn.setAttribute('aria-controls', id);
+    btn.setAttribute('aria-expanded', 'false');
+    btn.removeAttribute('onclick');
+    btn.addEventListener('click', function () {
+        var box = document.getElementById(id);
+        var open = box.style.display === 'block';
+        box.style.display = open ? 'none' : 'block';
+        if (!open) { box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+        btn.setAttribute('aria-expanded', String(!open));
+    });
+});
 </script>
 </body>
 </html>

@@ -70,6 +70,7 @@
 <header>
     <h1>Сложносочинённые предложения</h1>
     <p class="subtitle">Понятие, группы союзов, смысловые отношения, пунктуация (§11–17 · стр. 36–51)</p>
+    <p style="margin-top:10px;"><a href="index.html" style="color:#4a6fa5; font-weight:600;">← Карта курса</a></p>
 </header>
 
 <!-- §11 -->
@@ -179,7 +180,7 @@
             <ul>
                 <li>Можно подставить «и в это же время» или «и затем» → соединительный.</li>
                 <li>Можно подставить «или одно, или другое» → разделительный.</li>
-                <li>Можно подставить «а именно» или «но при этом» → противительный.</li>
+                <li>Можно подставить «но при этом» → противительный.</li>
             </ul>
         </div>
     </div>
@@ -424,11 +425,21 @@
 
 </div>
 <script>
-function toggleAnswer(id) {
-    const box = document.getElementById(id);
-    if (box.style.display === 'block') { box.style.display = 'none'; }
-    else { box.style.display = 'block'; box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
-}
+document.querySelectorAll('.btn').forEach(function (btn) {
+    var m = (btn.getAttribute('onclick') || '').match(/toggleAnswer\('([^']+)'\)/);
+    if (!m) return;
+    var id = m[1];
+    btn.setAttribute('aria-controls', id);
+    btn.setAttribute('aria-expanded', 'false');
+    btn.removeAttribute('onclick');
+    btn.addEventListener('click', function () {
+        var box = document.getElementById(id);
+        var open = box.style.display === 'block';
+        box.style.display = open ? 'none' : 'block';
+        if (!open) { box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+        btn.setAttribute('aria-expanded', String(!open));
+    });
+});
 </script>
 </body>
 </html>

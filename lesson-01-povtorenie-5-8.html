@@ -71,8 +71,9 @@
 <div class="container">
 
 <header>
-    <h1>Русский язык</h1>
-    <p class="subtitle">Повторение изученного в 5–8 классах (§1–6 · стр. 9–23)</p>
+    <h1>Повторение изученного в 5–8 классах</h1>
+    <p class="subtitle">Устная и письменная речь, монолог и диалог, стили и синтаксис простого предложения (§1–6 · стр. 9–23)</p>
+    <p style="margin-top:10px;"><a href="index.html" style="color:#4a6fa5; font-weight:600;">← Карта курса</a></p>
 </header>
 
 <!-- §1 -->
@@ -131,7 +132,7 @@
             <button class="btn" onclick="toggleAnswer('t1')">Показать ответ</button>
             <div id="t1" class="answer-box">
                 <div class="answer-title">✅ Ответ</div>
-                <p><strong>Лишние слова:</strong> «значит», «как бы», «дело в том, что», «вот», «именно».</p>
+                <p><strong>Лишние слова:</strong> «значит», «как бы», «дело в том, что», «вот».</p>
                 <p><strong>Почему мешают:</strong></p>
                 <ul>
                     <li>отвлекают внимание от содержания;</li>
@@ -209,11 +210,11 @@
             <div id="t3" class="answer-box">
                 <div class="answer-title">✅ Ответ</div>
                 <ol>
-                    <li><strong>Форма:</strong> письменная (записана в книге); <strong>вид:</strong> монолог (рассказывает один).</li>
-                    <li><strong>Форма:</strong> устная (запись разговора); <strong>вид:</strong> диалог (вопрос — ответ).</li>
-                    <li><strong>Форма:</strong> устная; <strong>вид:</strong> диалог.</li>
+                    <li><strong>Форма:</strong> письменная (текст записан в книге); <strong>вид:</strong> монолог (рассказывает один).</li>
+                    <li><strong>Форма:</strong> письменная (интервью напечатано и читается); <strong>вид:</strong> диалог (вопрос — ответ).</li>
+                    <li><strong>Форма:</strong> устная (разговор по телефону); <strong>вид:</strong> диалог.</li>
                 </ol>
-                <p><strong>Важно:</strong> форма и вид речи — разные параметры! Интервью в газете — устная речь (это беседа), но зафиксированная письменно.</p>
+                <p><strong>Важно:</strong> форма и вид речи — разные параметры. Если текст записан или напечатан (книга, газета), форма — письменная, даже если в его основе лежит устная беседа. Вид речи (монолог или диалог) при этом сохраняется.</p>
             </div>
         </div>
     </div>
@@ -556,11 +557,21 @@
 
 </div>
 <script>
-function toggleAnswer(id) {
-    const box = document.getElementById(id);
-    if (box.style.display === 'block') { box.style.display = 'none'; }
-    else { box.style.display = 'block'; box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
-}
+document.querySelectorAll('.btn').forEach(function (btn) {
+    var m = (btn.getAttribute('onclick') || '').match(/toggleAnswer\('([^']+)'\)/);
+    if (!m) return;
+    var id = m[1];
+    btn.setAttribute('aria-controls', id);
+    btn.setAttribute('aria-expanded', 'false');
+    btn.removeAttribute('onclick');
+    btn.addEventListener('click', function () {
+        var box = document.getElementById(id);
+        var open = box.style.display === 'block';
+        box.style.display = open ? 'none' : 'block';
+        if (!open) { box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+        btn.setAttribute('aria-expanded', String(!open));
+    });
+});
 </script>
 </body>
 </html>
